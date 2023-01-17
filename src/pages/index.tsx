@@ -1,5 +1,11 @@
+import MainContainer from "@/component/MainContainer";
+
 const Index = () => {
-  return <h1>test</h1>;
+  return (
+    <MainContainer>
+      <h1>jtytjyt</h1>
+    </MainContainer>
+  );
 };
 
 export default Index;
