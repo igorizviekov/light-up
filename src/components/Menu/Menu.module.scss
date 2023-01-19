@@ -1,0 +1,99 @@
+.menu-button {
+  display: none;
+  width: 30px;
+  height: 18px;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+
+  div {
+    height: 4px;
+    background: #52106a;
+    border-radius: 100px;
+  }
+
+  &__first {
+    width: 100%;
+  }
+  &__second {
+    width: 100%;
+  }
+  &__third {
+    width: 50%;
+  }
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+
+  &__content {
+    width: 360px;
+    background-color: white;
+    height: 100vh;
+    padding: 31px;
+
+    animation-duration: 0.3s;
+    animation-name: open;
+    animation-iteration-count: 1;
+  }
+
+  &_close {
+    .menu__content {
+      width: 0px;
+      padding: 0;
+      animation-duration: 0.3s;
+      animation-name: close;
+      animation-iteration-count: 1;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      width: 23px;
+      height: 23px;
+      background: url("../../assets/close.png");
+      background-size: 23px 23px !important;
+    }
+  }
+}
+
+@keyframes open {
+  from {
+    width: 0px;
+  }
+
+  to {
+    width: 360px;
+  }
+}
+
+@keyframes close {
+  from {
+    width: 360px;
+  }
+
+  to {
+    width: 0px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .menu-button {
+    display: flex;
+  }
+
+  .menu {
+    display: block;
+  }
+}

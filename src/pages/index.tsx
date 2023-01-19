@@ -1,9 +1,9 @@
-import MainContainer from "@/component/MainContainer";
+import MainContainer from "@/components/MainContainer";
 
 const Index = () => {
   return (
     <MainContainer>
-      <h1>jtytjyt</h1>
+      <h1></h1>
     </MainContainer>
   );
 };

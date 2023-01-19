@@ -1,0 +1,40 @@
+.links-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  gap: 21px;
+
+  h5 {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+
+    letter-spacing: 2.6px;
+
+    color: #000000;
+  }
+
+  a {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #515151;
+  }
+
+  button {
+    background-color: white;
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #515151;
+    width: fit-content;
+  }
+}
