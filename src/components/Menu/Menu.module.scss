@@ -23,6 +23,17 @@
   }
 }
 
+@media screen and (max-width: 520px) {
+  .menu-button {
+    width: 25px;
+    height: 15px;
+
+    div {
+      height: 3px;
+    }
+  }
+}
+
 .menu {
   display: none;
   position: fixed;

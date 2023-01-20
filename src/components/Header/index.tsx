@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className={styles["header"]}>
       <div className={styles["header__add"]}>
-        <h4>Special for you. Best jewellry in the world</h4>
+        <h4>Special for you. Best jewellry in the&nbsp;world</h4>
       </div>
       <div className={styles["header__content"]}>
         <main className={styles["header__main"]}>
