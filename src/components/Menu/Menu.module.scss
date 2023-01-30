@@ -52,11 +52,12 @@
     animation-duration: 0.3s;
     animation-name: open;
     animation-iteration-count: 1;
+    transform: translate(0px);
   }
 
   &_close {
     .menu__content {
-      width: 0px;
+      transform: translate(-360px);
       padding: 0;
       animation-duration: 0.3s;
       animation-name: close;
@@ -80,21 +81,21 @@
 
 @keyframes open {
   from {
-    width: 0px;
+    transform: translate(-360px);
   }
 
   to {
-    width: 360px;
+    transform: translate(0);
   }
 }
 
 @keyframes close {
   from {
-    width: 360px;
+    transform: translate(0);
   }
 
   to {
-    width: 0px;
+    transform: translate(-360px);
     padding: 0;
   }
 }
