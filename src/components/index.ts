@@ -9,3 +9,4 @@ export * from "./HeaderLinkLinks";
 export * from "./Input";
 export * from "./Menu";
 export * from "./Spoiler";
+export * from "./ProductCard";

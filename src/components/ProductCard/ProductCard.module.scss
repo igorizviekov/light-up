@@ -1,0 +1,86 @@
+.product-card {
+  width: 312px;
+  height: 326px;
+
+  background: #f7f7f7;
+  border-radius: 10px;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 218px 47px;
+  padding: 15px;
+
+  &__img {
+    height: 218px;
+    width: 282px;
+    justify-content: center;
+  }
+
+  &__tags-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__tag {
+    border-radius: 5px;
+    padding: 2px 20px;
+    width: min-content;
+
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    letter-spacing: 0.005em;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_new {
+      background: #754088;
+    }
+
+    &_sale {
+      background: #fbab73;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 47px;
+  }
+
+  &__category {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    text-transform: uppercase;
+  }
+}
