@@ -1,0 +1,93 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__bottom {
+    height: 60px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    padding-left: 55px;
+  }
+
+  &__columns-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 66px 28px 61px;
+  }
+
+  &__rights {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #939393;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    gap: 14px;
+  }
+
+  &__column-title {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 21px;
+
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+
+    color: #420d55;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #939393;
+  }
+
+  &__link {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #939393;
+
+    &:hover {
+      color: #939393;
+    }
+
+    &:visited {
+      color: #939393;
+    }
+
+    &:active {
+      color: #939393;
+    }
+
+    &:link {
+      color: #939393;
+    }
+  }
+
+  &__social-network {
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+    height: 14px;
+  }
+}

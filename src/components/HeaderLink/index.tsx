@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { IHeaderLinkProps } from "./types";
 import styles from "./HeaderLink.module.scss";
