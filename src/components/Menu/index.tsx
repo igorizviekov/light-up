@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DropDown from "../DropDown";
+import { Spoiler } from "../Spoiler";
 import styles from "./Menu.module.scss";
 
 const Menu = () => {
@@ -7,6 +8,23 @@ const Menu = () => {
   const [showMenuWrapper, setShowMenuWrapper] = useState<boolean>(false);
 
   const langs = ["UA", "US", "RU"];
+  const spoiler = {
+    label: "Spoiler1",
+    children: [
+      {
+        children: ["Subchild1", "Subchild1", "Subchild1"],
+        label: "Child1",
+      },
+      {
+        label: "Child2",
+        children: ["Subchild1", "Subchild1", "Subchild1"],
+      },
+      {
+        label: "Child3",
+        children: ["Subchild1", "Subchild1", "Subchild1"],
+      },
+    ],
+  };
   return (
     <>
       <button
@@ -38,7 +56,9 @@ const Menu = () => {
                   />
                   <DropDown items={langs} />
                 </header>
-                <div></div>
+                <div>
+                  <Spoiler {...spoiler} />
+                </div>
               </div>
             ) : null}
           </div>
