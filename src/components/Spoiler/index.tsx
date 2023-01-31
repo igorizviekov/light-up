@@ -22,7 +22,14 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
         className={styles["spoiler-wrapper__label"]}
         onClick={() => setIsMenuClosed((prev) => !prev)}
       >
-        {label} {isMenuClosed ? <AiOutlinePlus /> : <AiOutlineMinus />}
+        {label}{" "}
+        {children ? (
+          isMenuClosed ? (
+            <AiOutlinePlus />
+          ) : (
+            <AiOutlineMinus />
+          )
+        ) : null}
       </div>
       <div
         className={
@@ -31,44 +38,51 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
           (isMenuClosed ? styles["spoiler-wrapper__children_closed"] : "")
         }
       >
-        {children.map((e, i) => {
-          return (
-            <div className={styles["spoiler-wrapper__children-item"]}>
-              <div
-                className={styles["spoiler-wrapper__children-item-label"]}
-                onClick={() => setClosedChild(i)}
-              >
-                {e.label}
-                {closedChildren.indexOf(i) >= 0 ? (
-                  <AiOutlineMinus />
-                ) : (
-                  <AiOutlinePlus />
-                )}
+        {children &&
+          children.map((e, i) => {
+            return (
+              <div className={styles["spoiler-wrapper__children-item"]}>
+                <div
+                  className={styles["spoiler-wrapper__children-item-label"]}
+                  onClick={() => setClosedChild(i)}
+                >
+                  {e.label}
+                  {e.children ? (
+                    closedChildren.indexOf(i) >= 0 ? (
+                      <AiOutlineMinus />
+                    ) : (
+                      <AiOutlinePlus />
+                    )
+                  ) : null}
+                </div>
+                {e.children ? (
+                  <div
+                    className={
+                      styles["spoiler-wrapper__children-item-children"] +
+                      " " +
+                      (closedChildren.indexOf(i) >= 0
+                        ? ""
+                        : styles[
+                            "spoiler-wrapper__children-item-children_closed"
+                          ])
+                    }
+                  >
+                    {e.children.map((e) => {
+                      return (
+                        <div
+                          className={
+                            styles["spoiler-wrapper__children-item-subchild"]
+                          }
+                        >
+                          {e}
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : null}
               </div>
-              <div
-                className={
-                  styles["spoiler-wrapper__children-item-children"] +
-                  " " +
-                  (closedChildren.indexOf(i) >= 0
-                    ? ""
-                    : styles["spoiler-wrapper__children-item-children_closed"])
-                }
-              >
-                {e.children.map((e) => {
-                  return (
-                    <div
-                      className={
-                        styles["spoiler-wrapper__children-item-subchild"]
-                      }
-                    >
-                      {e}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
   );

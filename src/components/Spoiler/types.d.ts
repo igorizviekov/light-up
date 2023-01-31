@@ -1,9 +1,9 @@
 export interface ISpoilerChild {
   label: string;
-  children: string[];
+  children?: string[];
 }
 
 export interface ISpoilerProps {
   label: string;
-  children: ISpoilerChild[];
+  children?: ISpoilerChild[];
 }

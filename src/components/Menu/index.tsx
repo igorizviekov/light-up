@@ -12,18 +12,19 @@ const Menu = () => {
     label: "Spoiler1",
     children: [
       {
-        children: ["Subchild1", "Subchild1", "Subchild1"],
         label: "Child1",
       },
       {
         label: "Child2",
-        children: ["Subchild1", "Subchild1", "Subchild1"],
       },
       {
         label: "Child3",
         children: ["Subchild1", "Subchild1", "Subchild1"],
       },
     ],
+  };
+  const spoilerEmpty = {
+    label: "Spoiler1",
   };
   return (
     <>
@@ -56,9 +57,11 @@ const Menu = () => {
                   />
                   <DropDown items={langs} />
                 </header>
-                <div>
+                <main className={styles[`menu__main`]}>
                   <Spoiler {...spoiler} />
-                </div>
+                  <Spoiler {...spoiler} />
+                  <Spoiler {...spoilerEmpty} />
+                </main>
               </div>
             ) : null}
           </div>

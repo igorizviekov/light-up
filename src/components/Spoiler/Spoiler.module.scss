@@ -16,6 +16,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    cursor: pointer;
   }
 
   &__children {
@@ -48,6 +50,8 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 0;
+
+    cursor: pointer;
   }
 
   &__children-item {

@@ -57,6 +57,10 @@
     transform: translate(0px);
   }
 
+  &__main {
+    margin-top: 40px;
+  }
+
   &_close {
     .menu__content {
       transform: translate(-360px);
@@ -109,5 +113,34 @@
 
   .menu {
     display: block;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .menu {
+    &__content {
+      width: 100vw;
+    }
+  }
+
+  @keyframes open {
+    from {
+      transform: translate(-100vw);
+    }
+
+    to {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes close {
+    from {
+      transform: translate(0);
+    }
+
+    to {
+      transform: translate(-100vw);
+      padding: 0;
+    }
   }
 }
