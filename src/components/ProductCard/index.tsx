@@ -8,6 +8,7 @@ const ProductCard: React.FC<IProductCardProps> = ({
   img,
   category,
   title,
+  price,
 }) => {
   return (
     <div className={styles["product-card"]}>
@@ -49,8 +50,11 @@ const ProductCard: React.FC<IProductCardProps> = ({
         <img src={img} className={styles["product-card__img"]} />
       </div>
       <div className={styles["product-card__text-wrapper"]}>
-        <div className={styles["product-card__category"]}>{category}</div>
-        <h5 className={styles["product-card__title"]}>{title}</h5>
+        <div className={styles["product-card__price"]}>{price}$</div>
+        <div>
+          <div className={styles["product-card__category"]}>{category}</div>
+          <h5 className={styles["product-card__title"]}>{title}</h5>
+        </div>
       </div>
     </div>
   );

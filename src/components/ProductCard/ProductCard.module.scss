@@ -6,7 +6,7 @@
   border-radius: 10px;
 
   grid-template-columns: 1fr;
-  grid-template-rows: 30px 218px 47px;
+  grid-template-rows: 30px 218px 60px;
   padding: 15px;
   transition: background 0.3s;
   box-sizing: border-box;
@@ -22,6 +22,10 @@
 
     .product-card__buttons-wrapper {
       display: flex;
+    }
+
+    .product-card__price {
+      opacity: 1;
     }
   }
 
@@ -68,10 +72,24 @@
 
   &__text-wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    height: 47px;
+    height: 60px;
+  }
+
+  &__price {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 32px;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    align-self: flex-end;
   }
 
   &__category {

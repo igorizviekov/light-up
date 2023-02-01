@@ -12,3 +12,4 @@ export * from "./Spoiler";
 export * from "./ProductCard";
 export * from "./Pagination";
 export * from "./PaginationButton";
+export * from "./Filters";

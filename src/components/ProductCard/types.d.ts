@@ -4,4 +4,5 @@ export interface IProductCardProps {
   img: string;
   category: string;
   title: string;
+  price: number;
 }
