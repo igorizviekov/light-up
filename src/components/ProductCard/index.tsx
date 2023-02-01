@@ -34,8 +34,18 @@ const ProductCard: React.FC<IProductCardProps> = ({
             -{sale}%
           </div>
         ) : null}
+        <div className={styles["product-card__buy"]}>
+          <div className={styles["product-card__buy-icons"]}>
+            <img src={require("../../assets/like_v.png").default.src} />
+            <img src={require("../../assets/bag_v.png").default.src} />
+          </div>
+        </div>
       </div>
       <div>
+        <div className={styles["product-card__buttons-wrapper"]}>
+          <button />
+          <button />
+        </div>
         <img src={img} className={styles["product-card__img"]} />
       </div>
       <div className={styles["product-card__text-wrapper"]}>

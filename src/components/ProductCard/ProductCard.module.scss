@@ -8,6 +8,22 @@
   grid-template-columns: 1fr;
   grid-template-rows: 30px 218px 47px;
   padding: 15px;
+  transition: background 0.3s;
+  box-sizing: border-box;
+  border: 3px solid #f7f7f7;
+  position: relative;
+
+  &:hover {
+    background-color: white;
+    .product-card__buy {
+      height: 100px;
+      width: 120px;
+    }
+
+    .product-card__buttons-wrapper {
+      display: flex;
+    }
+  }
 
   &__img {
     height: 218px;
@@ -82,5 +98,56 @@
 
     color: #000000;
     text-transform: uppercase;
+  }
+
+  &__buy {
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    transition: 0.3s;
+    border-radius: 0px 0px 0px 100000px;
+    background: #f2e2f8;
+    overflow: hidden;
+
+    &-icons {
+      position: absolute;
+      width: 62px;
+      height: 23px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      top: 13px;
+      right: 15px;
+      img {
+        height: 23px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__buttons-wrapper {
+    display: none;
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+
+    button {
+      width: 25px;
+      height: 25px;
+      background: url("../../assets/button.png");
+
+      &:last-child {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
