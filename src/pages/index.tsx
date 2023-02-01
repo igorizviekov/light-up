@@ -1,4 +1,5 @@
 import MainContainer from "@/components/MainContainer";
+import Pagination from "@/components/Pagination";
 import ProductCard from "@/components/ProductCard";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
         category="SACRALITY"
         title="HEXAGON LIGHT"
       />
+      <Pagination />
     </MainContainer>
   );
 };

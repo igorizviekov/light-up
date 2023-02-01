@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min-content;
+
+  &__switch-button {
+    background-color: white;
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+    text-align: center;
+    color: #6b7280;
+
+    &:last-child {
+      margin-left: 25px;
+    }
+
+    &:first-child {
+      margin-right: 40px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+}

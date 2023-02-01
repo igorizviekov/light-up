@@ -10,3 +10,5 @@ export * from "./Input";
 export * from "./Menu";
 export * from "./Spoiler";
 export * from "./ProductCard";
+export * from "./Pagination";
+export * from "./PaginationButton";
