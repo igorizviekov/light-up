@@ -1,0 +1,63 @@
+.range {
+  height: 71px;
+  width: 172px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    letter-spacing: 0.005em;
+
+    color: #000000;
+  }
+
+  &__inputs-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__input-wrapper {
+    width: 66px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__input-text {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: #000000;
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1.5px solid #c4c4c4;
+
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    letter-spacing: 0.005em;
+
+    color: #000000;
+  }
+}

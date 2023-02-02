@@ -1,0 +1,39 @@
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min-content;
+  &__button {
+    -webkit-appearance: none; /* Remove default appearance styling for Webkit */
+    -moz-appearance: none; /* Remove default appearance styling for Firefox */
+    background: #d9d9d9;
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 100px;
+
+    &:checked {
+      background: #52106a;
+      position: relative;
+      width: 12px;
+      height: 12px;
+      border-radius: 100px;
+    }
+  }
+
+  &__label span {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    text-transform: uppercase;
+  }
+}

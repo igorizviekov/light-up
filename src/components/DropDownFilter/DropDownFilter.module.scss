@@ -1,0 +1,41 @@
+.drop-down-filter {
+  box-sizing: border-box;
+  padding: 8px 12px;
+
+  width: 185px;
+  height: 35px;
+
+  background: #fdfdfd;
+  border: 1px solid #420d55;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0px 0px 0px 2px #dccfe1;
+  }
+
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.005em;
+
+  color: #c4c4c4;
+
+  &_checked {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    align-items: center;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+
+    color: #000000;
+  }
+}

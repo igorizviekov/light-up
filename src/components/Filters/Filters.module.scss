@@ -10,6 +10,7 @@
   &__item {
     height: 66px;
     width: 100%;
+    position: relative;
     &:first-child {
       border-right: 1px solid #c4c4c4;
     }
@@ -42,6 +43,46 @@
   &__separator {
     min-width: 1070px;
     height: 66px;
+  }
+
+  &__sort {
+    z-index: 20;
+    right: 260px;
+    top: 86px;
+    position: absolute;
+    width: 225px;
+    height: 207px;
+    display: none;
+
+    background: #ffffff;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: column;
+
+    &_opened {
+      display: flex;
+    }
+  }
+
+  &__filter {
+    max-height: 0px;
+    transition: max-height 0.2s;
+    border-bottom: 1px solid #c4c4c4;
+
+    overflow: hidden;
+
+    &_opened {
+      max-height: 700px;
+    }
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  .filters-wrapper {
+    &__sort {
+      right: 60px;
+    }
   }
 }
 
