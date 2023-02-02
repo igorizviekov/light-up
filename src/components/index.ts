@@ -16,3 +16,4 @@ export * from "./Filters";
 export * from "./RadioButton";
 export * from "./Range";
 export * from "./DropDownFilter";
+export * from "./SortButton";

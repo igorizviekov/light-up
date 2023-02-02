@@ -50,15 +50,17 @@
     right: 260px;
     top: 86px;
     position: absolute;
-    width: 225px;
-    height: 207px;
+    width: 195px;
+    height: 187px;
     display: none;
 
     background: #ffffff;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
+    padding: 20px 30px;
+    gap: 10px;
 
     &_opened {
       display: flex;

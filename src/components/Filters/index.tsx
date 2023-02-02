@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import DropDownFilter from "../DropDownFilter";
 import RadioButton from "../RadioButton";
 import { Range } from "../Range";
+import SortButton from "../SortButton";
 import styles from "./Filters.module.scss";
 
 const Filters = () => {
@@ -48,7 +49,13 @@ const Filters = () => {
               " " +
               (isSortOpened ? styles["filters-wrapper__sort_opened"] : "")
             }
-          ></div>
+          >
+            <SortButton label="Variant fweer" />
+            <SortButton label="Variant fweer" />
+            <SortButton label="Variant fweer" />
+            <SortButton label="Variant fweer" />
+            <SortButton label="Variant fweer" />
+          </div>
         </div>
       </div>
 
