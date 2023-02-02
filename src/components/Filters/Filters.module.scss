@@ -72,8 +72,68 @@
 
     overflow: hidden;
 
+    &-content-wide {
+      width: 1150px;
+      margin: 40px auto;
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-content-tablet {
+      width: 706px;
+      margin: 40px auto;
+
+      display: none;
+      justify-content: space-between;
+    }
+
+    &-content-mobile {
+      display: none;
+      justify-content: space-between;
+      margin: 40px auto;
+      width: 330px;
+    }
+
     &_opened {
-      max-height: 700px;
+      max-height: 1000px;
+    }
+  }
+
+  &__category-title {
+    text-transform: uppercase;
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    margin-bottom: 15px;
+  }
+
+  &__category-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__row {
+    width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      justify-content: flex-end;
     }
   }
 }
@@ -99,6 +159,15 @@
     &__separator {
       min-width: 500px;
     }
+
+    &__filter {
+      &-content-wide {
+        display: none;
+      }
+      &-content-tablet {
+        display: flex;
+      }
+    }
   }
 }
 
@@ -106,6 +175,16 @@
   .filters-wrapper {
     &__separator {
       min-width: 200px;
+    }
+
+    &__filter {
+      &-content-tablet {
+        display: none;
+      }
+
+      &-content-mobile {
+        display: flex;
+      }
     }
   }
 }
