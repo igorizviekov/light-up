@@ -4,6 +4,9 @@ import RadioButton from "../RadioButton";
 import { Range } from "../Range";
 import SortButton from "../SortButton";
 import styles from "./Filters.module.scss";
+import { BsPlusLg } from "react-icons/bs";
+import { AiOutlineMinus } from "react-icons/ai";
+import { AiOutlineFilter } from "react-icons/ai";
 
 const Filters = () => {
   const [isSortOpened, setIsSortOpened] = useState<boolean>(false);
@@ -25,23 +28,35 @@ const Filters = () => {
     <>
       <div className={styles["filters-wrapper"]}>
         <div className={styles["filters-wrapper__item"]}>
-          <div
-            className={styles["filters-wrapper__text-wrapper"]}
+          <button
+            className={
+              styles["filters-wrapper__text-wrapper"] +
+              " " +
+              (isFilterOpened
+                ? styles["filters-wrapper__text-wrapper_opened"]
+                : "")
+            }
             onClick={() => setIsFilterOpened((prev) => !prev)}
           >
             <div className={styles["filters-wrapper__text"]}>Filter</div>
-            <img src={require("../../assets/filter.png").default.src} />
-          </div>
+            <AiOutlineFilter />
+          </button>
         </div>
         <div className={styles["filters-wrapper__separator"]} />
         <div className={styles["filters-wrapper__item"]}>
-          <div
-            className={styles["filters-wrapper__text-wrapper"]}
+          <button
+            className={
+              styles["filters-wrapper__text-wrapper"] +
+              " " +
+              (isSortOpened
+                ? styles["filters-wrapper__text-wrapper_opened"]
+                : "")
+            }
             onClick={() => setIsSortOpened((prev) => !prev)}
           >
             <div className={styles["filters-wrapper__text"]}>Sort</div>
-            <img src={require("../../assets/plus.png").default.src} />
-          </div>
+            {isSortOpened ? <BsPlusLg /> : <AiOutlineMinus />}
+          </button>
 
           <div
             className={

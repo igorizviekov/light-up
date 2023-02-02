@@ -139,7 +139,8 @@
 
       top: 13px;
       right: 15px;
-      img {
+      &-button {
+        color: #52106a;
         height: 23px;
         cursor: pointer;
       }
@@ -161,9 +162,10 @@
     button {
       width: 25px;
       height: 25px;
-      background: url("../../assets/button.png");
+      color: #939393;
+      background-color: transparent;
 
-      &:last-child {
+      &:first-child {
         transform: rotate(180deg);
       }
     }

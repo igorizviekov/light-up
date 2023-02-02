@@ -1,8 +1,10 @@
 import DropDown from "../DropDown";
 import HeaderLink from "../HeaderLink";
 import Menu from "../Menu";
-import MenuButton from "../HeaderButton";
 import styles from "./Header.module.scss";
+import { BsBag, BsPerson } from "react-icons/bs";
+import { AiOutlineSearch } from "react-icons/ai";
+import HeaderButton from "../HeaderButton";
 
 const Header = () => {
   const links = [
@@ -27,11 +29,17 @@ const Header = () => {
             <DropDown items={langs} />
           </div>
           <Menu />
-          <img alt="logo" src={require("../../assets/logo.png").default.src} />
+          <img src={require("../../assets/logo.png").default.src} />
           <div className={styles["header__buttons"]}>
-            <MenuButton img={require("../../assets/search.png").default.src} />
-            <MenuButton img={require("../../assets/profile.png").default.src} />
-            <MenuButton img={require("../../assets/bag.png").default.src} />
+            <HeaderButton>
+              <AiOutlineSearch size="100%" color="#939393" />
+            </HeaderButton>
+            <HeaderButton>
+              <BsPerson size="100%" color="#939393" />
+            </HeaderButton>
+            <HeaderButton>
+              <BsBag size="100%" color="#939393" />
+            </HeaderButton>
           </div>
         </main>
         <nav className={styles["header__links"]}>

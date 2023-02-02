@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./ProductCard.module.scss";
 import { IProductCardProps } from "./types";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BsBag, BsArrowRightCircle } from "react-icons/bs";
 
 const ProductCard: React.FC<IProductCardProps> = ({
   isNew,
@@ -37,15 +39,21 @@ const ProductCard: React.FC<IProductCardProps> = ({
         ) : null}
         <div className={styles["product-card__buy"]}>
           <div className={styles["product-card__buy-icons"]}>
-            <img src={require("../../assets/like_v.png").default.src} />
-            <img src={require("../../assets/bag_v.png").default.src} />
+            <AiOutlineHeart
+              className={styles["product-card__buy-icons-button"]}
+            />
+            <BsBag className={styles["product-card__buy-icons-button"]} />
           </div>
         </div>
       </div>
       <div>
         <div className={styles["product-card__buttons-wrapper"]}>
-          <button />
-          <button />
+          <button>
+            <BsArrowRightCircle size="100%" />
+          </button>
+          <button>
+            <BsArrowRightCircle size="100%" />
+          </button>
         </div>
         <img src={img} className={styles["product-card__img"]} />
       </div>

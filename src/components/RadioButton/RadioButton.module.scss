@@ -3,8 +3,8 @@
   align-items: center;
   width: min-content;
   &__button {
-    -webkit-appearance: none; /* Remove default appearance styling for Webkit */
-    -moz-appearance: none; /* Remove default appearance styling for Firefox */
+    -webkit-appearance: none;
+    -moz-appearance: none;
     background: #d9d9d9;
     width: 12px;
     height: 12px;

@@ -2,6 +2,7 @@ import { useState } from "react";
 import DropDown from "../DropDown";
 import { Spoiler } from "../Spoiler";
 import styles from "./Menu.module.scss";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Menu = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -54,7 +55,9 @@ const Menu = () => {
                       setShowMenu(false);
                       setTimeout(() => setShowMenuWrapper(false), 300);
                     }}
-                  />
+                  >
+                    <AiOutlineClose size="100%" />
+                  </button>
                   <DropDown items={langs} />
                 </header>
                 <main className={styles[`menu__main`]}>

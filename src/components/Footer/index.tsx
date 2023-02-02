@@ -1,6 +1,8 @@
 import Button from "../Button";
 import Input from "../Input";
 import styles from "./Footer.module.scss";
+import { FiFacebook } from "react-icons/fi";
+import { AiOutlineInstagram } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -18,14 +20,8 @@ const Footer = () => {
             So reveal your hidden side, with Vera & Paul
           </div>
           <div>
-            <img
-              src={require("../../assets/fb.png").default.src}
-              className={styles["footer__social-network"]}
-            />
-            <img
-              src={require("../../assets/inst.png").default.src}
-              className={styles["footer__social-network"]}
-            />
+            <FiFacebook size="14px" color="#939393" />
+            <AiOutlineInstagram size="14px" color="#939393" />
           </div>
         </div>
         <div className={styles["footer__column"]}>

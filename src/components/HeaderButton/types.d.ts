@@ -1,4 +1,6 @@
+import React from "react";
+
 export interface IHeaderButtonProps
   extends React.ComponentPropsWithoutRef<"button"> {
-  img: string;
+  children?: React.ReactNode;
 }
