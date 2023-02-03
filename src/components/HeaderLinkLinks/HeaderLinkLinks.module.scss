@@ -4,9 +4,9 @@
   align-items: flex-start !important;
   gap: 21px;
 
-  h5 {
+  &__title {
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--weight-bolder);
     font-size: 14px;
     line-height: 19px;
 
@@ -15,19 +15,19 @@
     color: var(--black);
   }
 
-  a {
+  &__link {
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--weight-bolder);
     font-size: 14px;
     line-height: 19px;
 
     color: var(--gray-4);
   }
 
-  button {
+  &__button {
     background-color: var(--white);
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--weight-bold);
     font-size: 14px;
     line-height: 19px;
 

@@ -14,22 +14,22 @@
     width: min-content;
   }
 
-  &__header-wrapper {
-    height: 116px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    h2 {
+  &__header {
+    &-title {
       text-transform: uppercase;
       font-style: normal;
       font-weight: 400;
       font-size: 23px;
       line-height: 32px;
-
       letter-spacing: 0.005em;
-
       color: var(--black);
+    }
+
+    &-wrapper {
+      height: 116px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

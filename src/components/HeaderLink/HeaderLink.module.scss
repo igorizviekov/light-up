@@ -2,19 +2,19 @@
   &__text {
     height: 40px;
     box-sizing: border-box;
+  }
 
-    a {
-      cursor: pointer;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 19px;
+  &__link {
+    cursor: pointer;
+    font-style: normal;
+    font-weight: var(--weight-bolder);
+    font-size: 14px;
+    line-height: 19px;
 
-      letter-spacing: 2.6px;
-      color: var(--gray-4);
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
+    letter-spacing: 2.6px;
+    color: var(--gray-4);
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   &__info {
@@ -25,22 +25,23 @@
     height: calc(100vh - 202px);
     display: none;
     z-index: 100;
-    hr {
-      width: 100%;
-      height: 2px;
-      background: var(--gray-9);
-    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background: var(--gray-9);
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     padding: 58px 260px 0px 355px;
+  }
 
-    img {
-      width: 383px;
-      height: 318px;
-    }
+  &__img {
+    width: 383px;
+    height: 318px;
   }
 
   &__links {
@@ -52,7 +53,7 @@
   &:hover {
     .header-link__text {
       border-bottom: 2px solid var(--primary);
-      a {
+      &__link {
         color: var(--primary);
       }
     }

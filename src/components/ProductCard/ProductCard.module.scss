@@ -47,7 +47,7 @@
     width: min-content;
 
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--weight-semibold);
     font-size: 12px;
     line-height: 16px;
     text-transform: uppercase;
@@ -78,7 +78,7 @@
 
   &__price {
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--weight-bolder);
     font-size: 23px;
     line-height: 32px;
     opacity: 0;
@@ -92,7 +92,7 @@
 
   &__category {
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--weight-semibold);
     font-size: 12px;
     line-height: 16px;
 
@@ -104,7 +104,7 @@
 
   &__title {
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--weight-bolder);
     font-size: 18px;
     line-height: 25px;
 

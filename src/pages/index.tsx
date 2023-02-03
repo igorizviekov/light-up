@@ -9,7 +9,7 @@ const Index = () => {
     <MainContainer>
       <div className={styles["main-page"]}>
         <div className={styles["main-page__header-wrapper"]}>
-          <h2>All pages</h2>
+          <h2 className={styles["main-page__header-title"]}>All pages</h2>
         </div>
         <Filters />
         <main className={styles["main-page__main"]}>

@@ -26,7 +26,7 @@
   &__text {
     margin-right: 8px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--weight-semibold);
     font-size: 18px;
     line-height: 25px;
     text-transform: uppercase;
@@ -114,7 +114,7 @@
   &__category-title {
     text-transform: uppercase;
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--weight-bolder);
     font-size: 16px;
     line-height: 22px;
 

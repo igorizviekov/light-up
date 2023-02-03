@@ -21,7 +21,9 @@ const Header = () => {
   return (
     <header className={styles["header"]}>
       <div className={styles["header__add"]}>
-        <h4>Special for you. Best jewelry in the&nbsp;world</h4>
+        <h4 className={styles["header__add-text"]}>
+          Special for you. Best jewelry in the&nbsp;world
+        </h4>
       </div>
       <div className={styles["header__content"]}>
         <main className={styles["header__main"]}>
@@ -29,7 +31,10 @@ const Header = () => {
             <DropDown items={langs} />
           </div>
           <Menu />
-          <img src={require("../../assets/logo.png").default.src} />
+          <img
+            src={require("../../assets/logo.png").default.src}
+            className={styles["header__logo"]}
+          />
           <div className={styles["header__buttons"]}>
             <HeaderButton>
               <AiOutlineSearch size="100%" color="#939393" />
@@ -54,7 +59,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <hr />
+      <hr className={styles["header__line"]} />
     </header>
   );
 };

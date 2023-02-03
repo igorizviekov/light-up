@@ -21,17 +21,20 @@ const HeaderLink: React.FC<IHeaderLinkProps> = ({ label }) => {
   return (
     <div className={styles["header-link"]}>
       <div className={styles["header-link__text"]}>
-        <a>{label}</a>
+        <a className={styles["header-link__link"]}>{label}</a>
       </div>
       <div className={styles["header-link__info"]}>
-        <hr />
+        <hr className={styles["header-link__line"]} />
         <div className={styles["header-link__wrapper"]}>
           <div className={styles["header-link__links"]}>
             <HeaderLinkLinks {...links1} />
             <HeaderLinkLinks {...links2} />
             <HeaderLinkLinks {...links3} />
           </div>
-          <img src={require("../../assets/product.png").default.src} />
+          <img
+            src={require("../../assets/product.png").default.src}
+            className={styles["header-link__img"]}
+          />
         </div>
       </div>
     </div>

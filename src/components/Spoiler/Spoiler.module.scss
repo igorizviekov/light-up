@@ -3,7 +3,7 @@
   border-bottom: 1px var(--gray-4) solid;
   &__label {
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--weight-bolder);
     font-size: 14px;
     line-height: 19px;
 
@@ -35,7 +35,7 @@
 
   &__children-item-label {
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--weight-bolder);
     font-size: 14px;
     line-height: 19px;
 
@@ -59,7 +59,7 @@
 
   &__children-item-subchild {
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--weight-bolder);
     font-size: 14px;
     line-height: 19px;
 
