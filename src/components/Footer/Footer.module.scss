@@ -8,13 +8,13 @@
     background-color: var(--gray-10);
     display: flex;
     align-items: center;
-    padding-left: 55px;
+    padding-left: 260px;
   }
 
   &__columns-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 55px 66px 28px 61px;
+    padding: 55px 237px 28px 259px;
     flex-wrap: wrap;
     gap: 43px;
   }
@@ -31,8 +31,17 @@
   &__column {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    gap: 14px;
+    width: fit-content;
+    max-width: 342px;
+    gap: 12px;
+
+    &:first-child {
+      gap: 14px;
+    }
+
+    &:last-child {
+      gap: 16px;
+    }
 
     &-title {
       font-style: normal;

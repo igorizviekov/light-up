@@ -50,7 +50,7 @@
   }
 
   &__separator {
-    min-width: 1070px;
+    min-width: 1030px;
     height: 66px;
   }
 
@@ -59,8 +59,8 @@
     right: 260px;
     top: 86px;
     position: absolute;
-    width: 195px;
-    height: 187px;
+    width: 225px;
+    height: 210px;
     display: none;
 
     background: var(--white);
@@ -80,12 +80,14 @@
     max-height: 0px;
     transition: max-height 0.2s;
     border-bottom: 1px solid var(--gray-1);
+    height: min-content;
 
     overflow: hidden;
 
     &-content-wide {
       width: 1150px;
       margin: 40px auto;
+      margin-bottom: 10px;
 
       display: flex;
       justify-content: space-between;
@@ -134,6 +136,11 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    height: min-content;
+
+    &:nth-child(even) {
+      gap: 40px;
+    }
   }
 
   &__row {

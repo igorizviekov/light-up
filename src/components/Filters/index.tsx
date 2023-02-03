@@ -92,7 +92,6 @@ const Filters = () => {
                 <RadioButton label="button" />
                 <RadioButton label="button" />
                 <RadioButton label="button" />
-                <RadioButton label="button" />
               </div>
             </div>
           </div>
@@ -102,7 +101,6 @@ const Filters = () => {
                 Probe
               </div>
               <div className={styles["filters-wrapper__category-wrapper"]}>
-                <RadioButton label="button" />
                 <RadioButton label="button" />
                 <RadioButton label="button" />
                 <RadioButton label="button" />

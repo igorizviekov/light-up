@@ -40,26 +40,30 @@ const ProductCard: React.FC<IProductCardProps> = ({
         <div className={styles["product-card__buy"]}>
           <div className={styles["product-card__buy-icons"]}>
             <AiOutlineHeart
+              size="25px"
               className={styles["product-card__buy-icons-button"]}
             />
-            <BsBag className={styles["product-card__buy-icons-button"]} />
+            <BsBag
+              size="20px"
+              className={styles["product-card__buy-icons-button"]}
+            />
           </div>
         </div>
       </div>
       <div>
         <div className={styles["product-card__buttons-wrapper"]}>
-          <button>
-            <BsArrowRightCircle size="100%" />
+          <button className={styles["product-card__button"]}>
+            <BsArrowRightCircle size="25px" />
           </button>
-          <button>
-            <BsArrowRightCircle size="100%" />
+          <button className={styles["product-card__button"]}>
+            <BsArrowRightCircle size="25px" />
           </button>
         </div>
         <img src={img} className={styles["product-card__img"]} />
       </div>
       <div className={styles["product-card__text-wrapper"]}>
         <div className={styles["product-card__price"]}>{price}$</div>
-        <div>
+        <div className={styles["product-card__data-wrapper"]}>
           <div className={styles["product-card__category"]}>{category}</div>
           <h5 className={styles["product-card__title"]}>{title}</h5>
         </div>

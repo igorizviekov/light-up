@@ -63,7 +63,7 @@ const Footer = () => {
             Subscribe to receive updates, access to exclusive deals, and more.
           </div>
           <Input />
-          <Button type="primary">button</Button>
+          <Button type="primary">subscribe</Button>
         </div>
       </div>
       <div className={styles["footer__bottom"]}>
