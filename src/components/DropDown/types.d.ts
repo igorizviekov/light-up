@@ -1,3 +1,3 @@
 export interface IDropDownProps {
-  items: Array<any>;
+  items: Array<string>;
 }
