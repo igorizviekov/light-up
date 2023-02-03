@@ -6,11 +6,10 @@ const DropDownFilter: React.FC<IDropDownProps> = ({ items }) => {
   const [value, setValue] = useState("To choose...");
   return (
     <select
-      className={
-        styles["drop-down-filter"] +
-        " " +
-        (value === "To choose..." ? "" : styles["drop-down-filter_checked"])
-      }
+      className={[
+        styles["drop-down-filter"],
+        value !== "To choose..." && styles["drop-down-filter_checked"],
+      ].join(" ")}
       value={value}
       onChange={(e) => setValue(e.target.value)}
     >

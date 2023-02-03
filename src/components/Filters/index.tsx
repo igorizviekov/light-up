@@ -29,13 +29,10 @@ const Filters = () => {
       <div className={styles["filters-wrapper"]}>
         <div className={styles["filters-wrapper__item"]}>
           <button
-            className={
-              styles["filters-wrapper__text-wrapper"] +
-              " " +
-              (isFilterOpened
-                ? styles["filters-wrapper__text-wrapper_opened"]
-                : "")
-            }
+            className={[
+              styles["filters-wrapper__text-wrapper"],
+              isFilterOpened && styles["filters-wrapper__text-wrapper_opened"],
+            ].join(" ")}
             onClick={() => setIsFilterOpened((prev) => !prev)}
           >
             <div className={styles["filters-wrapper__text"]}>Filter</div>
@@ -45,13 +42,10 @@ const Filters = () => {
         <div className={styles["filters-wrapper__separator"]} />
         <div className={styles["filters-wrapper__item"]}>
           <button
-            className={
-              styles["filters-wrapper__text-wrapper"] +
-              " " +
-              (isSortOpened
-                ? styles["filters-wrapper__text-wrapper_opened"]
-                : "")
-            }
+            className={[
+              styles["filters-wrapper__text-wrapper"],
+              isSortOpened && styles["filters-wrapper__text-wrapper_opened"],
+            ].join(" ")}
             onClick={() => setIsSortOpened((prev) => !prev)}
           >
             <div className={styles["filters-wrapper__text"]}>Sort</div>
@@ -59,11 +53,10 @@ const Filters = () => {
           </button>
 
           <div
-            className={
-              styles["filters-wrapper__sort"] +
-              " " +
-              (isSortOpened ? styles["filters-wrapper__sort_opened"] : "")
-            }
+            className={[
+              styles["filters-wrapper__sort"],
+              isSortOpened && styles["filters-wrapper__sort_opened"],
+            ].join(" ")}
           >
             <SortButton label="Variant fweer" />
             <SortButton label="Variant fweer" />
@@ -75,11 +68,10 @@ const Filters = () => {
       </div>
 
       <div
-        className={
-          styles["filters-wrapper__filter"] +
-          " " +
-          (isFilterOpened ? styles["filters-wrapper__filter_opened"] : "")
-        }
+        className={[
+          styles["filters-wrapper__filter"],
+          isFilterOpened && styles["filters-wrapper__filter_opened"],
+        ].join(" ")}
       >
         <div className={styles["filters-wrapper__filter-content-wide"]}>
           <div className={styles["filters-wrapper__column"]}>

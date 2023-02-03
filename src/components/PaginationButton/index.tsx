@@ -7,11 +7,10 @@ const PaginationButton: React.FC<IPaginationButtonProps> = ({
 }) => {
   return (
     <button
-      className={
-        styles["pagination-button"] +
-        " " +
-        (isChecked ? styles["pagination-button_checked"] : "")
-      }
+      className={[
+        styles["pagination-button"],
+        isChecked && styles["pagination-button_checked"],
+      ].join(" ")}
     >
       {label}
     </button>

@@ -3,11 +3,10 @@ import { IButtonProps } from "./type";
 const Button: React.FC<IButtonProps> = ({ type, children }) => {
   return (
     <button
-      className={
-        styles["button"] +
-        " " +
-        (type === "secondary" ? styles["button_secondary"] : "")
-      }
+      className={[
+        styles["button"],
+        type === "secondary" && styles["button_secondary"],
+      ].join(" ")}
     >
       {children}
     </button>

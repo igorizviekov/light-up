@@ -42,9 +42,9 @@ const Menu = () => {
       </button>
       {showMenuWrapper ? (
         <div
-          className={
-            styles["menu"] + " " + (showMenu ? "" : styles[`menu_close`])
-          }
+          className={[styles["menu"], showMenu && styles[`menu_close`]].join(
+            " "
+          )}
         >
           <div className={styles[`menu__content`]}>
             {showMenu ? (

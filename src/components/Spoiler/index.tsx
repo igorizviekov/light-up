@@ -32,11 +32,10 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
         ) : null}
       </div>
       <div
-        className={
-          styles["spoiler-wrapper__children"] +
-          " " +
-          (isMenuClosed ? styles["spoiler-wrapper__children_closed"] : "")
-        }
+        className={[
+          styles["spoiler-wrapper__children"],
+          isMenuClosed && styles["spoiler-wrapper__children_closed"],
+        ].join(" ")}
       >
         {children &&
           children.map((e, i) => {
@@ -57,15 +56,13 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
                 </div>
                 {e.children ? (
                   <div
-                    className={
-                      styles["spoiler-wrapper__children-item-children"] +
-                      " " +
-                      (closedChildren.indexOf(i) >= 0
-                        ? ""
-                        : styles[
-                            "spoiler-wrapper__children-item-children_closed"
-                          ])
-                    }
+                    className={[
+                      styles["spoiler-wrapper__children-item-children"],
+                      closedChildren.indexOf(i) >= 0 &&
+                        styles[
+                          "spoiler-wrapper__children-item-children_closed"
+                        ],
+                    ].join(" ")}
                   >
                     {e.children.map((e) => {
                       return (
