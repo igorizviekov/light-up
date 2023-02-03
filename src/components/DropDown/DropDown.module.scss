@@ -2,8 +2,8 @@
   box-sizing: border-box;
   width: 60px;
   height: 35px;
-  background: #ffffff;
-  border: 0.754526px solid #c4c4c4;
+  background: var(--white);
+  border: 0.754526px solid var(--gray-1);
   border-radius: 4.5px;
 
   font-style: normal;
@@ -12,6 +12,6 @@
   line-height: 16px;
   text-align: center;
   letter-spacing: 0.005em;
-  color: #939393;
+  color: var(--gray-2);
   text-transform: uppercase;
 }

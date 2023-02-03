@@ -1,6 +1,6 @@
 .spoiler-wrapper {
   box-sizing: border-box;
-  border-bottom: 1px #515151 solid;
+  border-bottom: 1px var(--gray-4) solid;
   &__label {
     font-style: normal;
     font-weight: 500;
@@ -9,7 +9,7 @@
 
     letter-spacing: 2.6px;
 
-    color: #515151;
+    color: var(--gray-4);
     text-transform: uppercase;
     padding: 20px 0;
     display: flex;
@@ -40,7 +40,7 @@
     line-height: 19px;
 
     letter-spacing: 2.6px;
-    color: #515151;
+    color: var(--gray-4);
     text-transform: uppercase;
     box-sizing: border-box;
 
@@ -65,7 +65,7 @@
 
     letter-spacing: 2.6px;
 
-    color: #a8a8a8;
+    color: var(--gray-5);
     text-transform: uppercase;
   }
 
@@ -75,7 +75,7 @@
     flex-direction: column;
     gap: 28px;
     padding-left: 25px;
-    border-left: 1px #a8a8a8 solid;
+    border-left: 1px var(--gray-5) solid;
     overflow: hidden;
     transition: 0.2s;
     max-height: 400px;

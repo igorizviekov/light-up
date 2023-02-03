@@ -1,7 +1,7 @@
 .input {
   box-sizing: border-box;
-  background: #ffffff;
-  border: 1px solid #c4c4c4;
+  background: var(--white);
+  border: 1px solid var(--gray-1);
   border-radius: 10px;
   width: 100%;
 
@@ -10,6 +10,6 @@
   font-size: 14px;
   line-height: 19px;
   letter-spacing: 0.005em;
-  color: #939393;
+  color: var(--gray-2);
   padding: 12px 20px;
 }

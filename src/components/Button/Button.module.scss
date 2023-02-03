@@ -8,8 +8,8 @@
   letter-spacing: 2.4px;
   text-transform: uppercase;
 
-  color: #ffffff;
-  background: #52106a;
+  color: var(--white);
+  background: var(--primary);
   border-radius: 10px;
   padding: 14px 30px;
 
@@ -20,9 +20,9 @@
   width: min-content;
 
   &_secondary {
-    background-color: white;
+    background-color: var(--white);
     box-sizing: border-box;
-    border: 1px #52106a solid;
-    color: #52106a;
+    border: 1px var(--primary) solid;
+    color: var(--primary);
   }
 }

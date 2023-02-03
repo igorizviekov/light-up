@@ -11,7 +11,7 @@
   border: 1px solid transparent;
   border-radius: 6px;
 
-  background-color: white;
+  background-color: var(--white);
 
   font-style: normal;
   font-weight: 500;
@@ -20,9 +20,9 @@
 
   text-align: center;
 
-  color: #6b7280;
+  color: var(--gray-8);
 
   &_checked {
-    border-color: #9770a6;
+    border-color: var(--primary-2);
   }
 }

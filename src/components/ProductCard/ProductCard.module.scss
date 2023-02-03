@@ -2,7 +2,7 @@
   width: 312px;
   height: 326px;
 
-  background: #f7f7f7;
+  background: var(--gray-10);
   border-radius: 10px;
 
   grid-template-columns: 1fr;
@@ -10,11 +10,11 @@
   padding: 15px;
   transition: background 0.3s;
   box-sizing: border-box;
-  border: 3px solid #f7f7f7;
+  border: 3px solid var(--white);
   position: relative;
 
   &:hover {
-    background-color: white;
+    background-color: var(--white);
     .product-card__buy {
       height: 100px;
       width: 120px;
@@ -54,18 +54,18 @@
 
     letter-spacing: 0.005em;
 
-    color: #ffffff;
+    color: var(--white);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     &_new {
-      background: #754088;
+      background: var(--primary);
     }
 
     &_sale {
-      background: #fbab73;
+      background: var(--orange);
     }
   }
 
@@ -86,7 +86,7 @@
 
     letter-spacing: 0.005em;
 
-    color: #000000;
+    color: var(--black);
     align-self: flex-end;
   }
 
@@ -98,7 +98,7 @@
 
     letter-spacing: 0.005em;
 
-    color: #000000;
+    color: var(--black);
     text-transform: uppercase;
   }
 
@@ -110,7 +110,7 @@
 
     letter-spacing: 0.005em;
 
-    color: #000000;
+    color: var(--black);
     text-transform: uppercase;
   }
 
@@ -122,7 +122,7 @@
     top: 0;
     transition: 0.3s;
     border-radius: 0px 0px 0px 100000px;
-    background: #f2e2f8;
+    background: var(--gray-7);
     overflow: hidden;
 
     &-icons {
@@ -136,7 +136,7 @@
       top: 13px;
       right: 15px;
       &-button {
-        color: #52106a;
+        color: var(--primary);
         height: 23px;
         cursor: pointer;
       }
@@ -158,7 +158,7 @@
     button {
       width: 25px;
       height: 25px;
-      color: #939393;
+      color: var(--gray-2);
       background-color: transparent;
 
       &:first-child {

@@ -6,10 +6,10 @@
 
   letter-spacing: 0.005em;
   text-transform: uppercase;
-  color: #939393;
-  background-color: white;
+  color: var(--gray-2);
+  background-color: var(--white);
 
   &:hover {
-    color: #52106a;
+    color: var(--primary);
   }
 }
