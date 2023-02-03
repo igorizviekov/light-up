@@ -58,7 +58,7 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
                   <div
                     className={[
                       styles["spoiler-wrapper__children-item-children"],
-                      closedChildren.indexOf(i) >= 0 &&
+                      closedChildren.indexOf(i) < 0 &&
                         styles[
                           "spoiler-wrapper__children-item-children_closed"
                         ],
