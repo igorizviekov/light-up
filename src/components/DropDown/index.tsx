@@ -3,9 +3,9 @@ import { IDropDownProps } from "./types";
 const DropDown: React.FC<IDropDownProps> = ({ items }) => {
   return (
     <select className={styles["drop-down"]}>
-      {items.map((e, i) => {
-        return <option key={i}>{e}</option>;
-      })}
+      {items.map((e, i) => (
+        <option key={i}>{e}</option>
+      ))}
     </select>
   );
 };
