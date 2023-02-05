@@ -163,10 +163,18 @@
   }
 }
 
-@media screen and (max-width: 1475px) {
+@media screen and (max-width: 1440px) {
   .filters-wrapper {
     &__separator {
-      min-width: 800px;
+      min-width: 1010px;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .filters-wrapper {
+    &__separator {
+      min-width: 930px;
     }
   }
 }

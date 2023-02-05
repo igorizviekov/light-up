@@ -98,3 +98,15 @@
     height: 14px;
   }
 }
+
+@media screen and (max-width: 1740px) {
+  .footer {
+    &__columns-wrapper {
+      padding: 55px 65px 28px 65px;
+    }
+
+    &__bottom {
+      padding-left: 65px;
+    }
+  }
+}
