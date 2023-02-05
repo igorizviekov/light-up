@@ -15,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     padding: 55px 237px 28px 259px;
-    flex-wrap: wrap;
     gap: 43px;
   }
 
@@ -107,6 +106,23 @@
 
     &__bottom {
       padding-left: 65px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    &__columns-wrapper {
+      padding: 67px 41px 47px 32px;
+    }
+
+    &__columns-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__bottom {
+      padding-left: 32px;
     }
   }
 }

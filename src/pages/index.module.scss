@@ -12,6 +12,13 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 24px;
     width: min-content;
+
+    &-mobile {
+      display: none;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 24px;
+      width: min-content;
+    }
   }
 
   &__header {
@@ -50,6 +57,17 @@
 
     &__header-wrapper {
       height: 94px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-page {
+    &__card-wrapper {
+      display: none;
+      &-mobile {
+        display: grid;
+      }
     }
   }
 }
