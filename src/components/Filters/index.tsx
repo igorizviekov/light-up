@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import DropDownFilter from "../DropDownFilter";
 import RadioButton from "../RadioButton";
 import { Range } from "../Range";
@@ -8,10 +8,15 @@ import { BsPlusLg } from "react-icons/bs";
 import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlineFilter } from "react-icons/ai";
 import { getClassByCondition } from "@/utils";
+import React from "react";
 
 const Filters = () => {
   const [isSortOpened, setIsSortOpened] = useState<boolean>(false);
   const [isFilterOpened, setIsFilterOpened] = useState<boolean>(false);
+
+  const sortRef = useRef<HTMLDivElement | null>(null);
+  const filterRef = useRef<HTMLDivElement | null>(null);
+  const filterContentRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (isSortOpened) {
@@ -25,11 +30,37 @@ const Filters = () => {
     }
   }, [isFilterOpened]);
 
+  const closeSort = (e: any) => {
+    if (!sortRef.current?.contains(e.target)) {
+      setIsSortOpened(false);
+    }
+  };
+
+  const closeFilter = (e: any) => {
+    if (
+      !filterRef.current?.contains(e.target) &&
+      !filterContentRef.current?.contains(e.target)
+    ) {
+      setIsFilterOpened(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", closeSort);
+    document.addEventListener("click", closeFilter);
+
+    return () => {
+      document.removeEventListener("click", closeSort);
+      document.removeEventListener("click", closeFilter);
+    };
+  }, []);
+
   return (
     <>
       <div className={styles["filters-wrapper"]}>
-        <div className={styles["filters-wrapper__item"]}>
+        <div className={styles["filters-wrapper__item"]} ref={filterRef}>
           <button
+            onClick={() => setIsFilterOpened((prev) => !prev)}
             className={[
               styles["filters-wrapper__text-wrapper"],
               getClassByCondition(
@@ -37,15 +68,15 @@ const Filters = () => {
                 styles["filters-wrapper__text-wrapper_opened"]
               ),
             ].join(" ")}
-            onClick={() => setIsFilterOpened((prev) => !prev)}
           >
             <div className={styles["filters-wrapper__text"]}>Filter</div>
             <AiOutlineFilter />
           </button>
         </div>
         <div className={styles["filters-wrapper__separator"]} />
-        <div className={styles["filters-wrapper__item"]}>
+        <div className={styles["filters-wrapper__item"]} ref={sortRef}>
           <button
+            onClick={() => setIsSortOpened((prev) => !prev)}
             className={[
               styles["filters-wrapper__text-wrapper"],
               getClassByCondition(
@@ -53,7 +84,6 @@ const Filters = () => {
                 styles["filters-wrapper__text-wrapper_opened"]
               ),
             ].join(" ")}
-            onClick={() => setIsSortOpened((prev) => !prev)}
           >
             <div className={styles["filters-wrapper__text"]}>Sort</div>
             {isSortOpened ? <AiOutlineMinus /> : <BsPlusLg />}
@@ -73,11 +103,13 @@ const Filters = () => {
             <SortButton label="Variant fweer" />
             <SortButton label="Variant fweer" />
             <SortButton label="Variant fweer" />
+            <SortButton label="Variant fweer" />
           </div>
         </div>
       </div>
 
       <div
+        ref={filterContentRef}
         className={[
           styles["filters-wrapper__filter"],
           getClassByCondition(
@@ -286,4 +318,4 @@ const Filters = () => {
   );
 };
 
-export default Filters;
+export default React.memo(Filters);
