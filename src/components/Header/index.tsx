@@ -37,13 +37,13 @@ const Header = () => {
           />
           <div className={styles["header__buttons"]}>
             <HeaderButton>
-              <AiOutlineSearch size="100%" color="#939393" />
+              <AiOutlineSearch size="150%" color="#939393" />
             </HeaderButton>
             <HeaderButton>
-              <BsPerson size="100%" color="#939393" />
+              <BsPerson size="150%" color="#939393" />
             </HeaderButton>
             <HeaderButton>
-              <BsBag size="100%" color="#939393" />
+              <BsBag size="150%" color="#939393" />
             </HeaderButton>
           </div>
         </main>

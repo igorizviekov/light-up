@@ -49,7 +49,7 @@ const Filters = () => {
             onClick={() => setIsSortOpened((prev) => !prev)}
           >
             <div className={styles["filters-wrapper__text"]}>Sort</div>
-            {isSortOpened ? <BsPlusLg /> : <AiOutlineMinus />}
+            {isSortOpened ? <AiOutlineMinus /> : <BsPlusLg />}
           </button>
 
           <div

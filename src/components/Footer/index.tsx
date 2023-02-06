@@ -16,12 +16,10 @@ const Footer = () => {
             The true you. Because the true you is truly beautiful, and we want
             to help you show it.
           </div>
-          <div className={styles["footer__text"]}>
-            So reveal your hidden side, with Vera & Paul
-          </div>
-          <div>
-            <FiFacebook size="14px" color="#939393" />
-            <AiOutlineInstagram size="14px" color="#939393" />
+          <div>So reveal your hidden side, with Vera & Paul</div>
+          <div className={styles["footer__social-networks-wrapper"]}>
+            <FiFacebook size="18px" color="#939393" />
+            <AiOutlineInstagram size="18px" color="#939393" />
           </div>
         </div>
         <div className={styles["footer__column"]}>

@@ -3,6 +3,13 @@
   flex-direction: column;
   justify-content: space-between;
 
+  &__social-networks-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45px;
+  }
+
   &__bottom {
     height: 60px;
     background-color: var(--gray-10);
