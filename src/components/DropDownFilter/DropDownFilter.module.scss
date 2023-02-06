@@ -1,0 +1,39 @@
+.drop-down-filter {
+  box-sizing: border-box;
+  padding: 8px 12px;
+
+  width: 185px;
+  height: 35px;
+
+  background: var(--white);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0px 0px 0px 2px var(--gray-3);
+  }
+
+  font-style: normal;
+  font-weight: var(--weight-semibold);
+  font-size: 14px;
+  line-height: 19px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.005em;
+
+  color: var(--gray-1);
+
+  &_checked {
+    font-style: normal;
+    font-weight: var(--weight-semibold);
+    font-size: 14px;
+    line-height: 19px;
+
+    align-items: center;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+
+    color: var(--black);
+  }
+}

@@ -1,0 +1,128 @@
+/*======================================================
+RESET
+======================================================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*===================================================================
+FONTS
+===================================================================*/
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../fonts/AvenirNextLTPro-Regular.otf");
+}
+/*===================================================================
+RESPONSIVE
+===================================================================*/
+.container {
+  max-width: 1344px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*================================================================
+COMMON STYLES
+==================================================================*/
+
+* {
+  font-family: "Avenir Next";
+}
+
+/*================================================================
+VARS
+==================================================================*/
+
+:root {
+  --white: #fff;
+  --primary: #52106a;
+  --primary-2: #9770a6;
+  --gray-1: #c4c4c4;
+  --gray-2: #939393;
+  --gray-3: #dccfe1;
+  --gray-4: #515151;
+  --gray-5: #a8a8a8;
+  --gray-6: #d9d9d9;
+  --gray-7: #f2e2f8;
+  --gray-8: #6b7280;
+  --gray-9: #d4d4d4;
+  --gray-10: #f7f7f7;
+  --black: #000;
+  --orange: #fbab73;
+  --black-transparent: rgba(0, 0, 0, 0.2);
+
+  --weight-semibold: 400;
+  --weight-bolder: 500;
+  --weight-bold: 600;
+}

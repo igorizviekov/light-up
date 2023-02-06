@@ -1,0 +1,28 @@
+.pagination-button {
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  background-color: var(--white);
+
+  font-style: normal;
+  font-weight: var(--weight-bolder);
+  font-size: 16px;
+  line-height: 22px;
+
+  text-align: center;
+
+  color: var(--gray-8);
+
+  &_checked {
+    border-color: var(--primary-2);
+  }
+}

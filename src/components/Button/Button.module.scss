@@ -1,0 +1,28 @@
+.button {
+  font-style: normal;
+  font-weight: var(--weight-bolder);
+  font-size: 12px;
+  line-height: 16px;
+
+  text-align: center;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 10px;
+  padding: 14px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: min-content;
+
+  &_secondary {
+    background-color: var(--white);
+    box-sizing: border-box;
+    border: 1px var(--primary) solid;
+    color: var(--primary);
+  }
+}

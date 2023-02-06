@@ -1,0 +1,15 @@
+.sort-button {
+  font-style: normal;
+  font-weight: var(--weight-semibold);
+  font-size: 14px;
+  line-height: 19px;
+
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  color: var(--gray-2);
+  background-color: var(--white);
+
+  &:hover {
+    color: var(--primary);
+  }
+}

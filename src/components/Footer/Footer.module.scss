@@ -1,0 +1,158 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__social-networks-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45px;
+  }
+
+  &__bottom {
+    height: 60px;
+    background-color: var(--gray-10);
+    display: flex;
+    align-items: center;
+    padding-left: 260px;
+  }
+
+  &__columns-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 237px 28px 259px;
+    gap: 43px;
+  }
+
+  &__rights {
+    font-style: normal;
+    font-weight: var(--weight-bolder);
+    font-size: 12px;
+    line-height: 20px;
+
+    color: var(--gray-2);
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 342px;
+    gap: 12px;
+
+    &:first-child {
+      gap: 14px;
+    }
+
+    &:last-child {
+      gap: 16px;
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: var(--weight-bolder);
+      font-size: 13px;
+      line-height: 21px;
+
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: var(--weight-semibold);
+    font-size: 14px;
+    line-height: 23px;
+
+    color: var(--gray-2);
+  }
+
+  &__link {
+    font-style: normal;
+    font-weight: var(--weight-semibold);
+    font-size: 14px;
+    line-height: 21px;
+
+    color: var(--gray-2);
+
+    &:hover {
+      color: var(--gray-2);
+    }
+
+    &:visited {
+      color: var(--gray-2);
+    }
+
+    &:active {
+      color: var(--gray-2);
+    }
+
+    &:link {
+      color: var(--gray-2);
+    }
+  }
+
+  &__social-network {
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+    height: 14px;
+  }
+}
+
+@media screen and (max-width: 1740px) {
+  .footer {
+    &__columns-wrapper {
+      padding: 55px 65px 28px 65px;
+    }
+
+    &__bottom {
+      padding-left: 65px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    &__columns-wrapper {
+      padding: 67px 41px 47px 32px;
+    }
+
+    &__columns-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__bottom {
+      padding-left: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer {
+    &__columns-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    &__columns-wrapper {
+      padding: 50px 14px 43px 15px;
+    }
+
+    &__bottom {
+      padding-left: 15px;
+    }
+
+    &__column {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.input {
+  box-sizing: border-box;
+  background: var(--white);
+  border: 1px solid var(--gray-1);
+  border-radius: 10px;
+  width: 100%;
+
+  font-style: normal;
+  font-weight: var(--weight-semibold);
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  color: var(--gray-2);
+  padding: 12px 20px;
+}

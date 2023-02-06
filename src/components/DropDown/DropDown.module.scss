@@ -1,0 +1,17 @@
+.drop-down {
+  box-sizing: border-box;
+  width: 60px;
+  height: 35px;
+  background: var(--white);
+  border: 0.754526px solid var(--gray-1);
+  border-radius: 4.5px;
+
+  font-style: normal;
+  font-weight: var(--weight-bolder);
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: var(--gray-2);
+  text-transform: uppercase;
+}
