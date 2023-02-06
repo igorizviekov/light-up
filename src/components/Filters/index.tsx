@@ -7,6 +7,7 @@ import styles from "./Filters.module.scss";
 import { BsPlusLg } from "react-icons/bs";
 import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlineFilter } from "react-icons/ai";
+import { getClassByCondition } from "@/utils";
 
 const Filters = () => {
   const [isSortOpened, setIsSortOpened] = useState<boolean>(false);
@@ -31,7 +32,10 @@ const Filters = () => {
           <button
             className={[
               styles["filters-wrapper__text-wrapper"],
-              isFilterOpened && styles["filters-wrapper__text-wrapper_opened"],
+              getClassByCondition(
+                isFilterOpened,
+                styles["filters-wrapper__text-wrapper_opened"]
+              ),
             ].join(" ")}
             onClick={() => setIsFilterOpened((prev) => !prev)}
           >
@@ -44,7 +48,10 @@ const Filters = () => {
           <button
             className={[
               styles["filters-wrapper__text-wrapper"],
-              isSortOpened && styles["filters-wrapper__text-wrapper_opened"],
+              getClassByCondition(
+                isSortOpened,
+                styles["filters-wrapper__text-wrapper_opened"]
+              ),
             ].join(" ")}
             onClick={() => setIsSortOpened((prev) => !prev)}
           >
@@ -55,7 +62,10 @@ const Filters = () => {
           <div
             className={[
               styles["filters-wrapper__sort"],
-              isSortOpened && styles["filters-wrapper__sort_opened"],
+              getClassByCondition(
+                isSortOpened,
+                styles["filters-wrapper__sort_opened"]
+              ),
             ].join(" ")}
           >
             <SortButton label="Variant fweer" />
@@ -70,7 +80,10 @@ const Filters = () => {
       <div
         className={[
           styles["filters-wrapper__filter"],
-          isFilterOpened && styles["filters-wrapper__filter_opened"],
+          getClassByCondition(
+            isFilterOpened,
+            styles["filters-wrapper__filter_opened"]
+          ),
         ].join(" ")}
       >
         <div className={styles["filters-wrapper__filter-content-wide"]}>

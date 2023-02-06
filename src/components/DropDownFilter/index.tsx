@@ -1,3 +1,4 @@
+import { getClassByCondition } from "@/utils";
 import { useState } from "react";
 import styles from "./DropDownFilter.module.scss";
 import { IDropDownProps } from "./types";
@@ -8,7 +9,10 @@ const DropDownFilter: React.FC<IDropDownProps> = ({ items }) => {
     <select
       className={[
         styles["drop-down-filter"],
-        value !== "To choose..." && styles["drop-down-filter_checked"],
+        getClassByCondition(
+          value !== "To choose...",
+          styles["drop-down-filter_checked"]
+        ),
       ].join(" ")}
       value={value}
       onChange={(e) => setValue(e.target.value)}

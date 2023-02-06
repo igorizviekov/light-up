@@ -1,3 +1,4 @@
+import { getClassByCondition } from "@/utils";
 import styles from "./Button.module.scss";
 import { IButtonProps } from "./type";
 const Button: React.FC<IButtonProps> = ({ type, children }) => {
@@ -5,7 +6,7 @@ const Button: React.FC<IButtonProps> = ({ type, children }) => {
     <button
       className={[
         styles["button"],
-        type === "secondary" && styles["button_secondary"],
+        getClassByCondition(type === "secondary", styles["button_secondary"]),
       ].join(" ")}
     >
       {children}

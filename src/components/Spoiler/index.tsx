@@ -2,6 +2,7 @@ import { ISpoilerProps } from "./types";
 import styles from "./Spoiler.module.scss";
 import { useState } from "react";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { getClassByCondition } from "@/utils";
 
 export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
   const [closedChildren, setClosedChildren] = useState<number[]>([]);
@@ -58,10 +59,10 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
                   <div
                     className={[
                       styles["spoiler-wrapper__children-item-children"],
-                      closedChildren.indexOf(i) < 0 &&
-                        styles[
-                          "spoiler-wrapper__children-item-children_closed"
-                        ],
+                      getClassByCondition(
+                        closedChildren.indexOf(i) < 0,
+                        styles["spoiler-wrapper__children-item-children_closed"]
+                      ),
                     ].join(" ")}
                   >
                     {e.children.map((e) => {

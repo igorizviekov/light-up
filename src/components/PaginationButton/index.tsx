@@ -1,3 +1,4 @@
+import { getClassByCondition } from "@/utils";
 import styles from "./PaginationButton.module.scss";
 import { IPaginationButtonProps } from "./types";
 
@@ -9,7 +10,7 @@ const PaginationButton: React.FC<IPaginationButtonProps> = ({
     <button
       className={[
         styles["pagination-button"],
-        isChecked && styles["pagination-button_checked"],
+        getClassByCondition(!!isChecked, styles["pagination-button_checked"]),
       ].join(" ")}
     >
       {label}

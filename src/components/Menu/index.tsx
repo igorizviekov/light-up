@@ -3,6 +3,7 @@ import DropDown from "../DropDown";
 import { Spoiler } from "../Spoiler";
 import styles from "./Menu.module.scss";
 import { AiOutlineClose } from "react-icons/ai";
+import { getClassByCondition } from "@/utils";
 
 const Menu = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -42,9 +43,10 @@ const Menu = () => {
       </button>
       {showMenuWrapper ? (
         <div
-          className={[styles["menu"], !showMenu && styles[`menu_close`]].join(
-            " "
-          )}
+          className={[
+            styles["menu"],
+            getClassByCondition(!showMenu, styles[`menu_close`]),
+          ].join(" ")}
         >
           <div className={styles[`menu__content`]}>
             {showMenu ? (
