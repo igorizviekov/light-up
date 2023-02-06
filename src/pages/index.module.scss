@@ -18,6 +18,13 @@
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 24px;
       width: min-content;
+
+      &-sm {
+        display: none;
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+        width: min-content;
+      }
     }
   }
 
@@ -76,6 +83,33 @@
   .main-page {
     &__card-wrapper {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .main-page {
+    &__header {
+      &-title {
+        font-size: 18px;
+      }
+
+      &-wrapper {
+        height: 80px;
+      }
+    }
+
+    &__card-wrapper {
+      &-mobile {
+        display: none;
+        &-sm {
+          display: grid;
+        }
+      }
+    }
+
+    &__main {
+      padding-top: 32px;
     }
   }
 }

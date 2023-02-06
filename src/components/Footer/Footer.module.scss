@@ -126,3 +126,26 @@
     }
   }
 }
+
+@media screen and (max-width: 360px) {
+  .footer {
+    &__columns-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    &__columns-wrapper {
+      padding: 50px 14px 43px 15px;
+    }
+
+    &__bottom {
+      padding-left: 15px;
+    }
+
+    &__column {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

@@ -211,3 +211,16 @@
     }
   }
 }
+
+@media screen and (max-width: 360px) {
+  .product-card {
+    width: 330px;
+    height: 345px;
+    grid-template-rows: 30px 230px 50px;
+    padding: 17px;
+
+    &__text-wrapper {
+      height: 50px;
+    }
+  }
+}

@@ -43,6 +43,21 @@ const Index = () => {
               );
             })}
           </div>
+          <div className={styles["main-page__card-wrapper-mobile-sm"]}>
+            {[1, 2, 3, 4].map((e) => {
+              return (
+                <ProductCard
+                  price={300}
+                  key={e}
+                  img={require("../assets/product-card-mock.png").default.src}
+                  isNew={true}
+                  sale={30}
+                  category="SACRALITY"
+                  title="HEXAGON LIGHT"
+                />
+              );
+            })}
+          </div>
           <Pagination />
         </main>
       </div>

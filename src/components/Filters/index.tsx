@@ -154,25 +154,25 @@ const Filters = () => {
 
         <div className={styles["filters-wrapper__filter-content-tablet"]}>
           <div className={styles["filters-wrapper__column"]}>
-            <div>
+            <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 CATEGORIES
               </div>
               <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
             </div>
-            <div>
+            <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 type of gem
               </div>
               <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
             </div>
-            <div>
+            <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 Probe
               </div>
               <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
             </div>
-            <div>
+            <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 gender
               </div>
@@ -180,7 +180,7 @@ const Filters = () => {
             </div>
           </div>
           <div className={styles["filters-wrapper__column"]}>
-            <div>
+            <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 MATERIALS
               </div>
@@ -191,10 +191,9 @@ const Filters = () => {
                 <RadioButton label="button" />
                 <RadioButton label="button" />
                 <RadioButton label="button" />
-                <RadioButton label="button" />
               </div>
             </div>
-            <div>
+            <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 sizes
               </div>
@@ -202,7 +201,7 @@ const Filters = () => {
             </div>
           </div>
           <div className={styles["filters-wrapper__column"]}>
-            <div>
+            <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 prices
               </div>
@@ -214,7 +213,7 @@ const Filters = () => {
                 <RadioButton label="button" />
               </div>
             </div>
-            <div>
+            <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <Range title="Or set your custom price range" />
             </div>
           </div>
