@@ -5,8 +5,12 @@ const HeaderLinkLinks: React.FC<IHeaderLinkLinksProps> = ({ name, links }) => {
   return (
     <div className={styles["links-wrapper"]}>
       <h5 className={styles["links-wrapper__title"]}>{name}</h5>
-      {links.map((e) => {
-        return <a className={styles["links-wrapper__link"]}>{e}</a>;
+      {links.map((e, i) => {
+        return (
+          <a className={styles["links-wrapper__link"]} key={i}>
+            {e}
+          </a>
+        );
       })}
       <button className={styles["links-wrapper__button"]}>SEE ALL {">"}</button>
     </div>
