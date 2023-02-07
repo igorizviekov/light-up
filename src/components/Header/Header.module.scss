@@ -49,7 +49,6 @@
   }
 
   &__links {
-    overflow: scroll;
     max-width: 100%;
     ul {
       display: flex;
@@ -152,6 +151,7 @@
 @media screen and (max-width: 440px) {
   .header {
     &__add {
+      padding: 0 40px;
       &-text {
         font-size: 10px;
       }

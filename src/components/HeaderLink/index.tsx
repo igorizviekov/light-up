@@ -18,8 +18,17 @@ const HeaderLink: React.FC<IHeaderLinkProps> = ({ label }) => {
     name: "OTHER",
     links: ["UNIQUE CANDLES", "KIMA TOYS", "NAMES"],
   };
+
   return (
-    <div className={styles["header-link"]}>
+    <div
+      className={styles["header-link"]}
+      onMouseEnter={() => {
+        document.body.style.overflow = "hidden";
+      }}
+      onMouseLeave={() => {
+        document.body.style.overflow = "auto";
+      }}
+    >
       <div className={styles["header-link__text"]}>
         <a className={styles["header-link__link"]}>{label}</a>
       </div>

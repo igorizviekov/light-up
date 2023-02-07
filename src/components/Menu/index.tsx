@@ -1,13 +1,35 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import DropDown from "../DropDown";
 import { Spoiler } from "../Spoiler";
 import styles from "./Menu.module.scss";
 import { AiOutlineClose } from "react-icons/ai";
-import { getClassByCondition } from "@/utils";
+import { getClassByCondition, setHidden } from "@/utils";
 
 const Menu = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [showMenuWrapper, setShowMenuWrapper] = useState<boolean>(false);
+
+  const menuContentRef = useRef<HTMLDivElement | null>(null);
+  const menuWrapperRef = useRef<HTMLDivElement | null>(null);
+
+  const closeMenu = (e: Event) => {
+    if (
+      menuWrapperRef.current?.contains(e.target as Document) &&
+      !menuContentRef.current?.contains(e.target as Document)
+    ) {
+      setShowMenu(false);
+      setTimeout(() => setShowMenuWrapper(false), 300);
+      setHidden();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", closeMenu);
+
+    return () => {
+      document.removeEventListener("click", closeMenu);
+    };
+  }, []);
 
   const langs = ["UA", "US", "RU"];
   const spoiler = {
@@ -28,6 +50,7 @@ const Menu = () => {
   const spoilerEmpty = {
     label: "Spoiler1",
   };
+
   return (
     <>
       <button
@@ -35,6 +58,7 @@ const Menu = () => {
         onClick={() => {
           setShowMenuWrapper(true);
           setShowMenu(true);
+          setHidden();
         }}
       >
         <div className={styles["menu-button__first"]}></div>
@@ -43,12 +67,13 @@ const Menu = () => {
       </button>
       {showMenuWrapper ? (
         <div
+          ref={menuWrapperRef}
           className={[
             styles["menu"],
             getClassByCondition(!showMenu, styles[`menu_close`]),
           ].join(" ")}
         >
-          <div className={styles[`menu__content`]}>
+          <div className={styles[`menu__content`]} ref={menuContentRef}>
             {showMenu ? (
               <div>
                 <header className={styles[`menu__header`]}>
@@ -56,6 +81,7 @@ const Menu = () => {
                     onClick={() => {
                       setShowMenu(false);
                       setTimeout(() => setShowMenuWrapper(false), 300);
+                      setHidden();
                     }}
                   >
                     <AiOutlineClose size="100%" />

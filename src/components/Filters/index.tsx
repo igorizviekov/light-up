@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import DropDownFilter from "../DropDownFilter";
 import RadioButton from "../RadioButton";
 import { Range } from "../Range";
@@ -30,16 +30,16 @@ const Filters = () => {
     }
   }, [isFilterOpened]);
 
-  const closeSort = (e: any) => {
-    if (!sortRef.current?.contains(e.target)) {
+  const closeSort = (e: Event) => {
+    if (!sortRef.current?.contains(e.target as Document)) {
       setIsSortOpened(false);
     }
   };
 
-  const closeFilter = (e: any) => {
+  const closeFilter = (e: Event) => {
     if (
-      !filterRef.current?.contains(e.target) &&
-      !filterContentRef.current?.contains(e.target)
+      !filterRef.current?.contains(e.target as Document) &&
+      !filterContentRef.current?.contains(e.target as Document)
     ) {
       setIsFilterOpened(false);
     }

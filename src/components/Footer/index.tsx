@@ -60,7 +60,7 @@ const Footer = () => {
           <div className={styles["footer__text"]}>
             Subscribe to receive updates, access to exclusive deals, and more.
           </div>
-          <Input />
+          <Input placeholder="Enter your email address" />
           <Button type="primary">subscribe</Button>
         </div>
       </div>
