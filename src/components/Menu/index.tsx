@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import DropDown from "../DropDown";
 import { Spoiler } from "../Spoiler";
 import styles from "./Menu.module.scss";
-import { AiOutlineClose } from "react-icons/ai";
 import { getClassByCondition, setHidden } from "@/utils";
 
 const Menu = () => {
@@ -84,7 +83,7 @@ const Menu = () => {
                       setHidden();
                     }}
                   >
-                    <AiOutlineClose size="100%" />
+                    <img src={require("../../assets/close.png").default.src} />
                   </button>
                   <DropDown items={langs} />
                 </header>

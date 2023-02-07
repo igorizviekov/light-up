@@ -1,7 +1,6 @@
 .header-button {
   width: 20px;
   height: 20px;
-  background-size: 20px 20px !important;
   background-color: var(--white);
 }
 
@@ -9,6 +8,12 @@
   .header-button {
     width: 18px;
     height: 18px;
-    background-size: 18px 18px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header-button {
+    width: 16px;
+    height: 16px;
   }
 }

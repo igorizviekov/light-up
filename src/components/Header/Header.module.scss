@@ -120,6 +120,10 @@
       margin: 0 15px;
       height: 104px;
     }
+    &__logo {
+      height: 20px;
+      width: 155px;
+    }
     &__add {
       height: 44px;
 
@@ -133,11 +137,6 @@
     &__main {
       height: 104px;
       grid-template-columns: repeat(3, 104px);
-
-      img {
-        height: 20px;
-        width: 155px;
-      }
     }
 
     &__buttons {

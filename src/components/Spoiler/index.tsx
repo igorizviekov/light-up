@@ -1,7 +1,6 @@
 import { ISpoilerProps } from "./types";
 import styles from "./Spoiler.module.scss";
 import { useState } from "react";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { getClassByCondition } from "@/utils";
 
 export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
@@ -25,9 +24,9 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
         {label}{" "}
         {children ? (
           isMenuClosed ? (
-            <AiOutlinePlus />
+            <img src={require("../../assets/plus.png").default.src} />
           ) : (
-            <AiOutlineMinus />
+            <img src={require("../../assets/minus_v.png").default.src} />
           )
         ) : null}
       </div>
@@ -48,9 +47,11 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
                   {e.label}
                   {e.children ? (
                     closedChildren.indexOf(i) >= 0 ? (
-                      <AiOutlineMinus />
+                      <img
+                        src={require("../../assets/minus_v.png").default.src}
+                      />
                     ) : (
-                      <AiOutlinePlus />
+                      <img src={require("../../assets/plus.png").default.src} />
                     )
                   ) : null}
                 </div>

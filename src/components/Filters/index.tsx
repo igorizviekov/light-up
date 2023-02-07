@@ -4,9 +4,6 @@ import RadioButton from "../RadioButton";
 import { Range } from "../Range";
 import SortButton from "../SortButton";
 import styles from "./Filters.module.scss";
-import { BsPlusLg } from "react-icons/bs";
-import { AiOutlineMinus } from "react-icons/ai";
-import { AiOutlineFilter } from "react-icons/ai";
 import { getClassByCondition } from "@/utils";
 import React from "react";
 
@@ -70,7 +67,13 @@ const Filters = () => {
             ].join(" ")}
           >
             <div className={styles["filters-wrapper__text"]}>Filter</div>
-            <AiOutlineFilter />
+            <img
+              src={
+                isFilterOpened
+                  ? require("../../assets/filter_v.png").default.src
+                  : require("../../assets/filter.png").default.src
+              }
+            />
           </button>
         </div>
         <div className={styles["filters-wrapper__separator"]} />
@@ -86,7 +89,11 @@ const Filters = () => {
             ].join(" ")}
           >
             <div className={styles["filters-wrapper__text"]}>Sort</div>
-            {isSortOpened ? <AiOutlineMinus /> : <BsPlusLg />}
+            {isSortOpened ? (
+              <img src={require("../../assets/minus_v.png").default.src} />
+            ) : (
+              <img src={require("../../assets/plus.png").default.src} />
+            )}
           </button>
 
           <div
