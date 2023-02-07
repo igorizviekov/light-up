@@ -14,7 +14,9 @@ const Footer = () => {
             The true you. Because the true you is truly beautiful, and we want
             to help you show it.
           </div>
-          <div>So reveal your hidden side, with Vera & Paul</div>
+          <div className={styles["footer__text"]}>
+            So reveal your hidden side, with Vera & Paul
+          </div>
           <div className={styles["footer__social-networks-wrapper"]}>
             <img src={require("../../assets/fb.png").default.src} />
             <img src={require("../../assets/inst.png").default.src} />

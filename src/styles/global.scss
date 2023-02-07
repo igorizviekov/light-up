@@ -126,3 +126,28 @@ VARS
   --weight-bolder: 500;
   --weight-bold: 600;
 }
+
+//GLOBAL MIXINS
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (min-width: 360px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 1366px) {
+      @content;
+    }
+  } @else if $size == desktop-up {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+}

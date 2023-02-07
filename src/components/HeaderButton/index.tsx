@@ -1,4 +1,4 @@
-import styles from "./MenuButton.module.scss";
+import styles from "./HeaderButton.module.scss";
 import { IHeaderButtonProps } from "./types";
 
 const HeaderButton: React.FC<IHeaderButtonProps> = ({ children }) => {

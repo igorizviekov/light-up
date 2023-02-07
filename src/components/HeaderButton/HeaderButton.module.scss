@@ -1,0 +1,12 @@
+@import "../../styles/mixins.scss";
+
+.header-button {
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+
+  @include for-size(tablet-portrait-up) {
+    width: 20px;
+    height: 20px;
+  }
+}

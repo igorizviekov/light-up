@@ -55,10 +55,10 @@ const Header = () => {
           </div>
         </main>
         <nav className={styles["header__links"]}>
-          <ul>
+          <ul className={styles["header__links-list"]}>
             {links.map((e, i) => {
               return (
-                <li key={i}>
+                <li key={i} className={styles["header__links-list-item"]}>
                   <HeaderLink label={e.label} />
                 </li>
               );

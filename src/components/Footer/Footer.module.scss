@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -11,21 +13,51 @@
   }
 
   &__bottom {
+    padding-left: 15px;
     height: 60px;
     background-color: var(--gray-10);
     display: flex;
     align-items: center;
-    padding-left: 260px;
+
+    @include for-size(tablet-portrait-up) {
+      padding-left: 32px;
+    }
+
+    @include for-size(tablet-landscape-up) {
+      padding-left: 61px;
+    }
+
+    @include for-size(big-desktop-up) {
+      padding-left: 259px;
+    }
   }
 
   &__columns-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    padding: 50px 14px 43px 15px;
     justify-content: space-between;
-    padding: 55px 237px 28px 259px;
-    gap: 43px;
+    gap: 35px;
+
+    @include for-size(tablet-portrait-up) {
+      grid-template-columns: 1fr 1fr;
+      padding: 67px 41px 47px 32px;
+    }
+
+    @include for-size(tablet-landscape-up) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 55px 61px 28px 61px;
+    }
+
+    @include for-size(big-desktop-up) {
+      padding: 55px 238px 28px 259px;
+    }
   }
 
   &__rights {
+    text-transform: uppercase;
+
     font-style: normal;
     font-weight: var(--weight-bolder);
     font-size: 12px;
@@ -43,6 +75,10 @@
 
     &:first-child {
       gap: 14px;
+
+      @include for-size(tablet-landscape-up) {
+        min-width: 343px;
+      }
     }
 
     &:last-child {
@@ -102,57 +138,5 @@
       margin-left: 15px;
     }
     height: 14px;
-  }
-}
-
-@media screen and (max-width: 1740px) {
-  .footer {
-    &__columns-wrapper {
-      padding: 55px 65px 28px 65px;
-    }
-
-    &__bottom {
-      padding-left: 65px;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    &__columns-wrapper {
-      padding: 67px 41px 47px 32px;
-    }
-
-    &__columns-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    &__bottom {
-      padding-left: 32px;
-    }
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .footer {
-    &__columns-wrapper {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 35px;
-    }
-
-    &__columns-wrapper {
-      padding: 50px 14px 43px 15px;
-    }
-
-    &__bottom {
-      padding-left: 15px;
-    }
-
-    &__column {
-      margin: 0;
-      padding: 0;
-    }
   }
 }

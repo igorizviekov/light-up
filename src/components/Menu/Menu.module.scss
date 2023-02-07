@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 @mixin button-div($height) {
   height: $height;
   background: var(--primary);
@@ -5,50 +7,49 @@
 }
 
 .menu-button {
-  display: none;
-  width: 30px;
-  height: 18px;
+  width: 25px;
+  height: 15px;
+
+  display: flex;
   justify-content: space-between;
   flex-direction: column;
   background-color: var(--white);
 
+  @include for-size(tablet-portrait-up) {
+    width: 29px;
+    height: 17px;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    display: none;
+  }
+
   &__first {
-    @include button-div(4px);
-    width: 100%;
+    @include button-div(3px);
+
+    @include for-size(tablet-portrait-up) {
+      @include button-div(4px);
+    }
   }
   &__second {
-    @include button-div(4px);
-    width: 100%;
+    @include button-div(3px);
+
+    @include for-size(tablet-portrait-up) {
+      @include button-div(4px);
+    }
   }
   &__third {
-    @include button-div(4px);
-    width: 50%;
-  }
-}
+    @include button-div(3px);
 
-@media screen and (max-width: 520px) {
-  .menu-button {
-    width: 25px;
-    height: 15px;
-
-    &__first {
-      @include button-div(3px);
-      width: 100%;
-    }
-    &__second {
-      @include button-div(3px);
-      width: 100%;
-    }
-    &__third {
-      @include button-div(3px);
-      width: 50%;
+    @include for-size(tablet-portrait-up) {
+      @include button-div(4px);
     }
   }
 }
 
 .menu {
+  display: block;
   z-index: 1000;
-  display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -57,8 +58,12 @@
   background: var(--black-transparent);
   overflow: visible;
 
+  @include for-size(tablet-landscape-up) {
+    display: none;
+  }
+
   &__content {
-    width: 360px;
+    width: 100vw;
     background-color: var(--white);
     height: 100vh;
     padding: 31px;
@@ -68,6 +73,10 @@
     animation-name: open;
     animation-iteration-count: 1;
     transform: translate(0px);
+
+    @include for-size(tablet-portrait-up) {
+      width: 360px;
+    }
   }
 
   &__main {
@@ -99,7 +108,7 @@
 
 @keyframes open {
   from {
-    transform: translate(-360px);
+    transform: translate(-100vw);
   }
 
   to {
@@ -113,31 +122,15 @@
   }
 
   to {
-    transform: translate(-360px);
+    transform: translate(-100vw);
     padding: 0;
   }
 }
 
-@media screen and (max-width: 980px) {
-  .menu-button {
-    display: flex;
-  }
-
-  .menu {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 530px) {
-  .menu {
-    &__content {
-      width: 100vw;
-    }
-  }
-
+@include for-size(tablet-portrait-up) {
   @keyframes open {
     from {
-      transform: translate(-100vw);
+      transform: translate(-360px);
     }
 
     to {
@@ -151,7 +144,7 @@
     }
 
     to {
-      transform: translate(-100vw);
+      transform: translate(-360px);
       padding: 0;
     }
   }

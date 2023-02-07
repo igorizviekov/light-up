@@ -1,58 +1,103 @@
+@import "../../styles/mixins.scss";
+
 .header {
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 260px;
+
+    margin: 0 15px;
+    height: 104px;
+
+    @include for-size(tablet-portrait-up) {
+      height: 140px;
+      margin: 0 30px;
+    }
+
+    @include for-size(tablet-landscape-up) {
+      height: 160px;
+      margin: 0 60px;
+    }
+
+    @include for-size(big-desktop-up) {
+      margin: 0 260px;
+    }
   }
 
   &__add {
     background: var(--primary);
-    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 15px;
+    height: 44px;
+
+    padding: 0 40px;
 
     &-text {
       font-style: normal;
-      font-weight: var(--weight-bolder);
-      font-size: 11px;
-      line-height: 18px;
-
-      letter-spacing: 2.2px;
       text-transform: uppercase;
 
       color: var(--white);
+
+      font-weight: var(--weight-bolder);
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 2.2px;
+
+      @include for-size(tablet-portrait-up) {
+        font-size: 11px;
+        line-height: 18px;
+      }
     }
   }
 
   &__languages {
     justify-self: start;
+    display: none;
+
+    @include for-size(tablet-landscape-up) {
+      display: block;
+    }
   }
 
   &__logo {
     justify-self: center;
-    height: 33px;
-    width: 264px;
+
+    height: 20px;
+    width: 155px;
+
+    @include for-size(tablet-portrait-up) {
+      width: 264px;
+      height: 35px;
+    }
   }
 
   &__main {
-    height: 120px;
     min-width: 100%;
     display: grid;
     grid-template-columns: 100px 264px 100px;
     justify-content: space-between;
     align-items: center;
-    grid-template-columns: repeat(3, 120px);
+
+    height: 104px;
+    grid-template-columns: repeat(3, 104px);
+
+    @include for-size(tablet-portrait-up) {
+      height: 140px;
+    }
   }
 
   &__links {
     max-width: 100%;
-    ul {
+    display: none;
+
+    @include for-size(tablet-landscape-up) {
+      display: block;
+    }
+    &-list {
       display: flex;
-      li:not(:first-child) {
+      &-item:not(:first-child) {
         margin-left: 40px;
       }
     }
@@ -62,8 +107,20 @@
     justify-self: end;
     display: flex;
     align-items: center;
+
+    button:nth-child(2) {
+      display: none;
+      @include for-size(tablet-portrait-up) {
+        display: block;
+      }
+    }
+
     button:not(:first-child) {
-      margin-left: 30px;
+      margin-left: 20px !important;
+
+      @include for-size(tablet-portrait-up) {
+        margin-left: 30px !important;
+      }
     }
   }
 
@@ -71,89 +128,5 @@
     width: 100%;
     height: 2px;
     background: var(--gray-9);
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .header {
-    &__content {
-      margin: 0 60px;
-    }
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .header {
-    &__content {
-      margin: 0 30px;
-      height: 140px;
-    }
-
-    &__languages {
-      display: none;
-    }
-
-    &__links {
-      display: none;
-    }
-
-    &__main {
-      height: 140px;
-      grid-template-columns: repeat(3, 140px);
-    }
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .header {
-    &__buttons {
-      button:nth-child(2) {
-        display: none;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .header {
-    &__content {
-      margin: 0 15px;
-      height: 104px;
-    }
-    &__logo {
-      height: 20px;
-      width: 155px;
-    }
-    &__add {
-      height: 44px;
-
-      &-text {
-        font-weight: var(--weight-bolder);
-        font-size: 10px;
-        line-height: 14px;
-        letter-spacing: 2.2px;
-      }
-    }
-    &__main {
-      height: 104px;
-      grid-template-columns: repeat(3, 104px);
-    }
-
-    &__buttons {
-      button:not(:first-child) {
-        margin-left: 20px !important;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 440px) {
-  .header {
-    &__add {
-      padding: 0 40px;
-      &-text {
-        font-size: 10px;
-      }
-    }
   }
 }
