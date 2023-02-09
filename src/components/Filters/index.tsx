@@ -6,6 +6,7 @@ import SortButton from "../SortButton";
 import styles from "./Filters.module.scss";
 import { getClassByCondition } from "@/utils";
 import React from "react";
+import FilterLabel from "../FilterLabel";
 
 const Filters = () => {
   const [isSortOpened, setIsSortOpened] = useState<boolean>(false);
@@ -14,6 +15,7 @@ const Filters = () => {
   const sortRef = useRef<HTMLDivElement | null>(null);
   const filterRef = useRef<HTMLDivElement | null>(null);
   const filterContentRef = useRef<HTMLDivElement | null>(null);
+  const wrapper = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (isSortOpened) {
@@ -28,7 +30,10 @@ const Filters = () => {
   }, [isFilterOpened]);
 
   const closeSort = (e: Event) => {
-    if (!sortRef.current?.contains(e.target as Document)) {
+    if (
+      !sortRef.current?.contains(e.target as Document) &&
+      !wrapper.current?.contains(e.target as Document)
+    ) {
       setIsSortOpened(false);
     }
   };
@@ -36,7 +41,8 @@ const Filters = () => {
   const closeFilter = (e: Event) => {
     if (
       !filterRef.current?.contains(e.target as Document) &&
-      !filterContentRef.current?.contains(e.target as Document)
+      !filterContentRef.current?.contains(e.target as Document) &&
+      !wrapper.current?.contains(e.target as Document)
     ) {
       setIsFilterOpened(false);
     }
@@ -54,7 +60,7 @@ const Filters = () => {
 
   return (
     <>
-      <div className={styles["filters-wrapper"]}>
+      <div className={styles["filters-wrapper"]} ref={wrapper}>
         <div className={styles["filters-wrapper__item"]} ref={filterRef}>
           <button
             onClick={() => setIsFilterOpened((prev) => !prev)}
@@ -76,7 +82,26 @@ const Filters = () => {
             />
           </button>
         </div>
-        <div className={styles["filters-wrapper__separator"]} />
+        <div className={styles["filters-wrapper__separator"]}>
+          {isFilterOpened ? (
+            <div className={styles["filters-wrapper__separator-content"]}>
+              <div
+                className={styles["filters-wrapper__separator-content-filters"]}
+              >
+                <FilterLabel title="rerere" />
+                <FilterLabel title="rerere" />
+                <FilterLabel title="rerere" />
+                <FilterLabel title="rerere" />
+                <FilterLabel title="rerere" />
+                <FilterLabel title="rerere" />
+                <FilterLabel title="rerere" />
+              </div>
+              <button className={styles["filters-wrapper__reset-filters"]}>
+                reset
+              </button>
+            </div>
+          ) : null}
+        </div>
         <div className={styles["filters-wrapper__item"]} ref={sortRef}>
           <button
             onClick={() => setIsSortOpened((prev) => !prev)}
