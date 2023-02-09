@@ -167,7 +167,19 @@ const Filters = () => {
               <div className={styles["filters-wrapper__category-title"]}>
                 CATEGORIES
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div>
               <div className={styles["filters-wrapper__category-title"]}>
@@ -212,13 +224,37 @@ const Filters = () => {
               <div className={styles["filters-wrapper__category-title"]}>
                 type of gem
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div>
               <div className={styles["filters-wrapper__category-title"]}>
                 sizes
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
           </div>
           <div className={styles["filters-wrapper__column"]}>
@@ -246,25 +282,73 @@ const Filters = () => {
               <div className={styles["filters-wrapper__category-title"]}>
                 CATEGORIES
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 type of gem
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 Probe
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__column-items-wrapper"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 gender
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
           </div>
           <div className={styles["filters-wrapper__column"]}>
@@ -285,7 +369,16 @@ const Filters = () => {
               <div className={styles["filters-wrapper__category-title"]}>
                 sizes
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
           </div>
           <div className={styles["filters-wrapper__column"]}>
@@ -313,43 +406,127 @@ const Filters = () => {
               <div className={styles["filters-wrapper__category-title"]}>
                 MATERIALS
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__row"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 MATERIALS
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__row"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 MATERIALS
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__row"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 MATERIALS
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__row"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 MATERIALS
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__row"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 MATERIALS
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__row"]}>
               <div className={styles["filters-wrapper__category-title"]}>
                 MATERIALS
               </div>
-              <DropDownFilter items={["ervevr", "ff34f3", "qwwqdqdwqw"]} />
+              <DropDownFilter
+                items={[
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                  "ervevr",
+                  "ff34f3",
+                  "qwwqdqdwqw",
+                ]}
+              />
             </div>
             <div className={styles["filters-wrapper__row"]}>
               <Range title="Or set your custom price range" />

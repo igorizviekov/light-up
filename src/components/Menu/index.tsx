@@ -83,7 +83,9 @@ const Menu = () => {
                   >
                     <img src={require("../../assets/close.png").default.src} />
                   </button>
-                  <DropDown items={langs} />
+                  <div className={styles[`menu__drop-down-wrapper`]}>
+                    <DropDown items={langs} />
+                  </div>
                 </header>
                 <main className={styles[`menu__main`]}>
                   <Spoiler {...spoiler} />
