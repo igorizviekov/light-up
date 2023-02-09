@@ -67,24 +67,38 @@
     text-transform: uppercase;
     color: var(--gray-1);
 
+    position: absolute;
+    right: 37px;
+
     &:hover {
       color: var(--primary);
+    }
+
+    @include for-size(tablet-landscape-up) {
+      position: static;
     }
   }
 
   &__separator-content-filters {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 20px;
     overflow: auto;
     margin-right: 20px;
+
+    @include for-size(tablet-landscape-up) {
+      display: flex;
+    }
   }
 
   &__separator {
+    display: none;
     min-width: 0px;
     height: 66px;
+    position: relative;
 
     @include for-size(tablet-portrait-up) {
+      display: block;
       min-width: 470px;
     }
 
@@ -137,6 +151,19 @@
 
     &_opened {
       display: flex;
+    }
+  }
+
+  &__separator-content-filters-mobile {
+    border-bottom: 1px solid var(--gray-1);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 18px 23px;
+
+    @include for-size(tablet-landscape-up) {
+      display: none;
     }
   }
 

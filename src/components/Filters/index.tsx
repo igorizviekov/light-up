@@ -150,6 +150,17 @@ const Filters = () => {
           ),
         ].join(" ")}
       >
+        <div
+          className={
+            styles["filters-wrapper__separator-content-filters-mobile"]
+          }
+        >
+          <FilterLabel title="rerere" />
+          <FilterLabel title="rerere" />
+
+          <FilterLabel title="rerere" />
+          <FilterLabel title="rerere" />
+        </div>
         <div className={styles["filters-wrapper__filter-content-wide"]}>
           <div className={styles["filters-wrapper__column"]}>
             <div>

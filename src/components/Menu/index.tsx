@@ -3,6 +3,7 @@ import DropDown from "../DropDown";
 import { Spoiler } from "../Spoiler";
 import styles from "./Menu.module.scss";
 import { getClassByCondition, setHidden } from "@/utils";
+import MenuLink from "../MenuLink";
 
 const Menu = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -46,9 +47,6 @@ const Menu = () => {
       },
     ],
   };
-  const spoilerEmpty = {
-    label: "Spoiler1",
-  };
 
   return (
     <>
@@ -90,7 +88,10 @@ const Menu = () => {
                 <main className={styles[`menu__main`]}>
                   <Spoiler {...spoiler} />
                   <Spoiler {...spoiler} />
-                  <Spoiler {...spoilerEmpty} />
+                  <Spoiler {...spoiler} />
+                  <Spoiler {...spoiler} />
+                  <Spoiler {...spoiler} />
+                  <MenuLink title="Profile" />
                 </main>
               </div>
             ) : null}
