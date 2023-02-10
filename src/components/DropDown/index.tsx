@@ -5,7 +5,7 @@ import { IDropDownProps } from "./types";
 
 const DropDown: React.FC<IDropDownProps> = ({ items }) => {
   const [selectedItem, setSelectedItem] = useState<number>(0);
-  const [isOpened, setIsOpened] = useState<boolean>(true);
+  const [isOpened, setIsOpened] = useState<boolean>(false);
 
   const dropDown = useRef<HTMLDivElement | null>(null);
 
