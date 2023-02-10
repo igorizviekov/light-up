@@ -1,8 +1,6 @@
 import Button from "../Button";
 import Input from "../Input";
 import styles from "./Footer.module.scss";
-import { FiFacebook } from "react-icons/fi";
-import { AiOutlineInstagram } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -16,10 +14,12 @@ const Footer = () => {
             The true you. Because the true you is truly beautiful, and we want
             to help you show it.
           </div>
-          <div>So reveal your hidden side, with Vera & Paul</div>
+          <div className={styles["footer__text"]}>
+            So reveal your hidden side, with Vera & Paul
+          </div>
           <div className={styles["footer__social-networks-wrapper"]}>
-            <FiFacebook size="18px" color="#939393" />
-            <AiOutlineInstagram size="18px" color="#939393" />
+            <img src={require("../../assets/fb.png").default.src} />
+            <img src={require("../../assets/inst.png").default.src} />
           </div>
         </div>
         <div className={styles["footer__column"]}>
@@ -60,7 +60,7 @@ const Footer = () => {
           <div className={styles["footer__text"]}>
             Subscribe to receive updates, access to exclusive deals, and more.
           </div>
-          <Input />
+          <Input placeholder="Enter your email address" />
           <Button type="primary">subscribe</Button>
         </div>
       </div>

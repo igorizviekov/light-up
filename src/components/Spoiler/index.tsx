@@ -1,7 +1,6 @@
 import { ISpoilerProps } from "./types";
 import styles from "./Spoiler.module.scss";
 import { useState } from "react";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { getClassByCondition } from "@/utils";
 
 export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
@@ -9,7 +8,6 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
   const [isMenuClosed, setIsMenuClosed] = useState<boolean>(true);
 
   const setClosedChild = (index: number) => {
-    console.log(index);
     if (closedChildren.indexOf(index) >= 0) {
       setClosedChildren((prev) => [...prev.filter((e) => e !== index)]);
     } else {
@@ -26,9 +24,9 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
         {label}{" "}
         {children ? (
           isMenuClosed ? (
-            <AiOutlinePlus />
+            <img src={require("../../assets/plus.png").default.src} />
           ) : (
-            <AiOutlineMinus />
+            <img src={require("../../assets/minus_v.png").default.src} />
           )
         ) : null}
       </div>
@@ -41,7 +39,7 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
         {children &&
           children.map((e, i) => {
             return (
-              <div className={styles["spoiler-wrapper__children-item"]}>
+              <div className={styles["spoiler-wrapper__children-item"]} key={i}>
                 <div
                   className={styles["spoiler-wrapper__children-item-label"]}
                   onClick={() => setClosedChild(i)}
@@ -49,9 +47,11 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
                   {e.label}
                   {e.children ? (
                     closedChildren.indexOf(i) >= 0 ? (
-                      <AiOutlineMinus />
+                      <img
+                        src={require("../../assets/minus_v.png").default.src}
+                      />
                     ) : (
-                      <AiOutlinePlus />
+                      <img src={require("../../assets/plus.png").default.src} />
                     )
                   ) : null}
                 </div>
@@ -65,9 +65,10 @@ export const Spoiler: React.FC<ISpoilerProps> = ({ label, children }) => {
                       ),
                     ].join(" ")}
                   >
-                    {e.children.map((e) => {
+                    {e.children.map((e, i) => {
                       return (
                         <div
+                          key={i}
                           className={
                             styles["spoiler-wrapper__children-item-subchild"]
                           }

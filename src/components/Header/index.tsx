@@ -2,8 +2,6 @@ import DropDown from "../DropDown";
 import HeaderLink from "../HeaderLink";
 import Menu from "../Menu";
 import styles from "./Header.module.scss";
-import { BsBag, BsPerson } from "react-icons/bs";
-import { AiOutlineSearch } from "react-icons/ai";
 import HeaderButton from "../HeaderButton";
 
 const Header = () => {
@@ -37,21 +35,30 @@ const Header = () => {
           />
           <div className={styles["header__buttons"]}>
             <HeaderButton>
-              <AiOutlineSearch size="150%" color="#939393" />
+              <img
+                src={require("../../assets/search.png").default.src}
+                style={{ width: "100%", height: "100%" }}
+              />
             </HeaderButton>
             <HeaderButton>
-              <BsPerson size="150%" color="#939393" />
+              <img
+                src={require("../../assets/account.png").default.src}
+                style={{ width: "100%", height: "100%" }}
+              />
             </HeaderButton>
             <HeaderButton>
-              <BsBag size="150%" color="#939393" />
+              <img
+                src={require("../../assets/bag.png").default.src}
+                style={{ width: "100%", height: "100%" }}
+              />
             </HeaderButton>
           </div>
         </main>
         <nav className={styles["header__links"]}>
-          <ul>
+          <ul className={styles["header__links-list"]}>
             {links.map((e, i) => {
               return (
-                <li key={i}>
+                <li key={i} className={styles["header__links-list-item"]}>
                   <HeaderLink label={e.label} />
                 </li>
               );

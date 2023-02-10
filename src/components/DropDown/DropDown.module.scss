@@ -1,17 +1,57 @@
 .drop-down {
   box-sizing: border-box;
-  width: 60px;
-  height: 35px;
-  background: var(--white);
-  border: 0.754526px solid var(--gray-1);
-  border-radius: 4.5px;
+  padding: 10px;
+  position: absolute;
+  background-color: var(--white);
+  z-index: 80;
 
-  font-style: normal;
-  font-weight: var(--weight-bolder);
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.005em;
-  color: var(--gray-2);
-  text-transform: uppercase;
+  border: 1px solid var(--gray-1);
+  border-radius: 5px;
+  width: 60px;
+
+  &__image {
+    width: 9px;
+    height: 5px;
+
+    &_opened {
+      transform: rotate(180deg);
+    }
+  }
+  &__items {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+    letter-spacing: 0.005em;
+
+    color: var(--gray-2);
+  }
+  &__item {
+    &:not(:last-child) {
+      margin: 8px 0;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  &__to-choose {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+    text-align: center;
+    letter-spacing: 0.005em;
+
+    color: var(--gray-2);
+  }
 }

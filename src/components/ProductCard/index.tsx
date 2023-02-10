@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./ProductCard.module.scss";
 import { IProductCardProps } from "./types";
-import { AiOutlineHeart } from "react-icons/ai";
-import { BsBag, BsArrowRightCircle } from "react-icons/bs";
 
 const ProductCard: React.FC<IProductCardProps> = ({
   isNew,
@@ -39,24 +37,22 @@ const ProductCard: React.FC<IProductCardProps> = ({
         ) : null}
         <div className={styles["product-card__buy"]}>
           <div className={styles["product-card__buy-icons"]}>
-            <AiOutlineHeart
-              size="25px"
-              className={styles["product-card__buy-icons-button"]}
-            />
-            <BsBag
-              size="20px"
-              className={styles["product-card__buy-icons-button"]}
-            />
+            <button className={styles["product-card__buy-button"]}>
+              <img src={require("../../assets/heart_v.png").default.src} />
+            </button>
+            <button className={styles["product-card__buy-button"]}>
+              <img src={require("../../assets/bag_v.png").default.src} />
+            </button>
           </div>
         </div>
       </div>
       <div>
         <div className={styles["product-card__buttons-wrapper"]}>
           <button className={styles["product-card__button"]}>
-            <BsArrowRightCircle size="25px" />
+            <img src={require("../../assets/arrow.png").default.src} />
           </button>
           <button className={styles["product-card__button"]}>
-            <BsArrowRightCircle size="25px" />
+            <img src={require("../../assets/arrow.png").default.src} />
           </button>
         </div>
         <img src={img} className={styles["product-card__img"]} />
